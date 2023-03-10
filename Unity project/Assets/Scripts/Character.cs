@@ -19,9 +19,13 @@ public class Character : MonoBehaviour
 
     void Update()
     {
-        velocity = new Vector3(0, velocity.y - gravity, 0);
+        velocity = new Vector3(0, velocity.y, 0);
         velocity += transform.right * movementSpeed * inputMovement.x;
         velocity += transform.forward * movementSpeed * inputMovement.y;
+        if (!characterController.isGrounded)
+        {
+            velocity.y -= gravity;
+        }
 
         characterController.Move(velocity * Time.deltaTime);
         transform.Rotate(0, cameraSpeed * cameraRotation.x, 0);
