@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEditor.Animations;
 
 public class Character : MonoBehaviour
 {
     public CharacterController characterController;
     public Transform cameraPivotVertical;
     public Transform cameraPivotHorizontal;
+    public Transform modelTransform;
+    public Animator modelAnimator;
+    public AnimatorController idleAnimations;
+    public AnimatorController runAnimations;
 
     public float movementSpeed;
     public float cameraSensitivityHorizontal;
@@ -15,10 +20,12 @@ public class Character : MonoBehaviour
     public float jumpImpulse;
     public float gravity;
     public float cameraClamp;
+    public float modelRotationSpeed;
 
     Vector2 inputMovement;
     Vector2 cameraRotation;
-    Vector3 velocity;
+    Vector3 horizontalVelocity;
+    Vector3 verticalVelocity;
 
     float verticalRot;
     float horizontalRot;
@@ -31,18 +38,40 @@ public class Character : MonoBehaviour
 
     void Update()
     {
-        // Movement
-        velocity = new Vector3(0, velocity.y, 0);
-        velocity += cameraPivotHorizontal.forward * movementSpeed * inputMovement.y;
-        velocity += cameraPivotHorizontal.right * movementSpeed * inputMovement.x;
+        UpdateMovement();
+        UpdateCamera();
+    }
+
+    void UpdateMovement()
+    {
+        horizontalVelocity = new Vector3(0, 0, 0);
+        horizontalVelocity += cameraPivotHorizontal.forward * movementSpeed * inputMovement.y;
+        horizontalVelocity += cameraPivotHorizontal.right * movementSpeed * inputMovement.x;
         if (!characterController.isGrounded)
         {
-            velocity.y -= gravity;
+            verticalVelocity.y -= gravity;
         }
 
-        characterController.Move(velocity * Time.deltaTime);
+        characterController.Move((horizontalVelocity + verticalVelocity) * Time.deltaTime);
 
-        // Rotation
+        if (horizontalVelocity.magnitude != 0)
+        {
+            modelAnimator.runtimeAnimatorController = runAnimations;
+
+            modelTransform.rotation = Quaternion.Lerp(
+                modelTransform.rotation,
+                Quaternion.LookRotation(horizontalVelocity, Vector3.up),
+                modelRotationSpeed * Time.deltaTime
+            );
+        }
+        else
+        {
+            modelAnimator.runtimeAnimatorController = idleAnimations;
+        }
+    }
+
+    void UpdateCamera()
+    {
         horizontalRot += cameraRotation.x * cameraSensitivityHorizontal * Time.deltaTime;
         verticalRot -= cameraRotation.y * cameraSensitivityVertical * Time.deltaTime;
         verticalRot = Mathf.Clamp(verticalRot, -cameraClamp, cameraClamp);
@@ -66,7 +95,7 @@ public class Character : MonoBehaviour
     {
         if (characterController.isGrounded && value.ReadValue<float>() > 0)
         {
-            velocity.y = jumpImpulse;
+            verticalVelocity.y = jumpImpulse;
         }
     }
 }
