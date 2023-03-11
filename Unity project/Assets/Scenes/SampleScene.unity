@@ -274,6 +274,8 @@ MonoBehaviour:
   modelAnimator: {fileID: 680662208}
   idleAnimations: {fileID: 9100000, guid: a8555c0cff30527479e32562cef9141f, type: 2}
   runAnimations: {fileID: 9100000, guid: eb79e3fd0dd669f40a90a984b92a0ccf, type: 2}
+  jumpAnimations: {fileID: 9100000, guid: 54ff599963ec97843ad4d4ddeeb61810, type: 2}
+  fallAnimations: {fileID: 9100000, guid: 441942176ee9a724b9afe936d1d03496, type: 2}
   movementSpeed: 3
   cameraSensitivityHorizontal: 200
   cameraSensitivityVertical: 50

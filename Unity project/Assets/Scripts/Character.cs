@@ -13,6 +13,8 @@ public class Character : MonoBehaviour
     public Animator modelAnimator;
     public AnimatorController idleAnimations;
     public AnimatorController runAnimations;
+    public AnimatorController jumpAnimations;
+    public AnimatorController fallAnimations;
 
     public float movementSpeed;
     public float cameraSensitivityHorizontal;
@@ -40,6 +42,7 @@ public class Character : MonoBehaviour
     {
         UpdateMovement();
         UpdateCamera();
+        UpdateModel();
     }
 
     void UpdateMovement()
@@ -53,21 +56,6 @@ public class Character : MonoBehaviour
         }
 
         characterController.Move((horizontalVelocity + verticalVelocity) * Time.deltaTime);
-
-        if (horizontalVelocity.magnitude != 0)
-        {
-            modelAnimator.runtimeAnimatorController = runAnimations;
-
-            modelTransform.rotation = Quaternion.Lerp(
-                modelTransform.rotation,
-                Quaternion.LookRotation(horizontalVelocity, Vector3.up),
-                modelRotationSpeed * Time.deltaTime
-            );
-        }
-        else
-        {
-            modelAnimator.runtimeAnimatorController = idleAnimations;
-        }
     }
 
     void UpdateCamera()
@@ -78,6 +66,42 @@ public class Character : MonoBehaviour
 
         cameraPivotVertical.localRotation = Quaternion.Euler(verticalRot, 0, 0);
         cameraPivotHorizontal.localRotation = Quaternion.Euler(0, horizontalRot, 0);
+    }
+
+    void UpdateModel()
+    {
+        if (horizontalVelocity != Vector3.zero)
+        {
+            modelTransform.rotation = Quaternion.Lerp(
+                modelTransform.rotation,
+                Quaternion.LookRotation(horizontalVelocity, Vector3.up),
+                modelRotationSpeed * Time.deltaTime
+            );
+        }
+
+        if (!characterController.isGrounded)
+        {
+            if (verticalVelocity.y > 0)
+            {
+                // Going up
+                modelAnimator.runtimeAnimatorController = jumpAnimations;
+            }
+            else
+            {
+                // Coming down
+                modelAnimator.runtimeAnimatorController = fallAnimations;
+            }
+        }
+        else if (horizontalVelocity != Vector3.zero)
+        {
+            // Running
+            modelAnimator.runtimeAnimatorController = runAnimations;
+        }
+        else
+        {
+            // Standing
+            modelAnimator.runtimeAnimatorController = idleAnimations;
+        }
     }
 
     public void OnMovement(InputAction.CallbackContext value)
