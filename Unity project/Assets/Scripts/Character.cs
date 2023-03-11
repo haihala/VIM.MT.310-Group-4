@@ -6,10 +6,12 @@ using UnityEngine.InputSystem;
 public class Character : MonoBehaviour
 {
     public CharacterController characterController;
-    public Transform cameraPivot;
+    public Transform cameraPivotVertical;
+    public Transform cameraPivotHorizontal;
 
     public float movementSpeed;
-    public float cameraSpeed;
+    public float cameraSensitivityHorizontal;
+    public float cameraSensitivityVertical;
     public float jumpImpulse;
     public float gravity;
     public float cameraClamp;
@@ -18,22 +20,21 @@ public class Character : MonoBehaviour
     Vector2 cameraRotation;
     Vector3 velocity;
 
-    float rotX;
-    float rotY;
+    float verticalRot;
+    float horizontalRot;
 
     void Start()
     {
-        rotX = cameraPivot.localRotation.eulerAngles.x;
+        verticalRot = cameraPivotVertical.localRotation.eulerAngles.x;
+        horizontalRot = cameraPivotHorizontal.localRotation.eulerAngles.y;
     }
 
     void Update()
     {
         // Movement
         velocity = new Vector3(0, velocity.y, 0);
-        // This does rely on the facing of the player object, which is rotated accordingly,
-        // but once a model has been added, it will look weird as the model will rotate in place when you turn the camera.
-        velocity += transform.right * movementSpeed * inputMovement.x;
-        velocity += transform.forward * movementSpeed * inputMovement.y;
+        velocity += cameraPivotHorizontal.forward * movementSpeed * inputMovement.y;
+        velocity += cameraPivotHorizontal.right * movementSpeed * inputMovement.x;
         if (!characterController.isGrounded)
         {
             velocity.y -= gravity;
@@ -42,11 +43,12 @@ public class Character : MonoBehaviour
         characterController.Move(velocity * Time.deltaTime);
 
         // Rotation
-        transform.Rotate(0, cameraRotation.x * cameraSpeed * Time.deltaTime, 0);
-        rotX -= cameraRotation.y * cameraSpeed * Time.deltaTime;
-        rotX = Mathf.Clamp(rotX, -cameraClamp, cameraClamp);
+        horizontalRot += cameraRotation.x * cameraSensitivityHorizontal * Time.deltaTime;
+        verticalRot -= cameraRotation.y * cameraSensitivityVertical * Time.deltaTime;
+        verticalRot = Mathf.Clamp(verticalRot, -cameraClamp, cameraClamp);
 
-        cameraPivot.localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
+        cameraPivotVertical.localRotation = Quaternion.Euler(verticalRot, 0, 0);
+        cameraPivotHorizontal.localRotation = Quaternion.Euler(0, horizontalRot, 0);
     }
 
     public void OnMovement(InputAction.CallbackContext value)
