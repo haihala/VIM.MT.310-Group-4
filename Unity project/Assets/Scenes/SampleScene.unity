@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 138586850}
   - component: {fileID: 138586849}
   - component: {fileID: 138586851}
+  - component: {fileID: 138586853}
+  - component: {fileID: 138586852}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -220,8 +222,8 @@ MonoBehaviour:
     m_ActionName: Basic action map/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 138586851}
-        m_TargetAssemblyTypeName: Character, Assembly-CSharp
+      - m_Target: {fileID: 138586853}
+        m_TargetAssemblyTypeName: PlayerCameraController, Assembly-CSharp
         m_MethodName: OnLookAround
         m_Mode: 0
         m_Arguments:
@@ -268,21 +270,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 138586849}
-  cameraPivotVertical: {fileID: 1219773689}
   cameraPivotHorizontal: {fileID: 420131134}
+  movementSpeed: 3
+  jumpImpulse: 8
+  gravity: 0.2
+  horizontalVelocity: {x: 0, y: 0, z: 0}
+  verticalVelocity: {x: 0, y: 0, z: 0}
+--- !u!114 &138586852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138586843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e310ab8b58bd104aa0db5c38bdd1a55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMover: {fileID: 138586851}
+  characterController: {fileID: 138586849}
   modelTransform: {fileID: 353498777}
   modelAnimator: {fileID: 680662208}
   idleAnimations: {fileID: 9100000, guid: a8555c0cff30527479e32562cef9141f, type: 2}
   runAnimations: {fileID: 9100000, guid: eb79e3fd0dd669f40a90a984b92a0ccf, type: 2}
   jumpAnimations: {fileID: 9100000, guid: 54ff599963ec97843ad4d4ddeeb61810, type: 2}
   fallAnimations: {fileID: 9100000, guid: 441942176ee9a724b9afe936d1d03496, type: 2}
-  movementSpeed: 3
-  cameraSensitivityHorizontal: 200
-  cameraSensitivityVertical: 50
-  jumpImpulse: 10
-  gravity: 0.2
-  cameraClamp: 30
   modelRotationSpeed: 10
+--- !u!114 &138586853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138586843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38c0b0671e1694aac0c7d3defe1f59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalPivot: {fileID: 420131134}
+  verticalPivot: {fileID: 1219773689}
+  horizontalSensitivity: 6
+  verticalSensitivity: 4
+  verticalClamp: 35
 --- !u!4 &353498777 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 81bb9eea30387e442899949a80011e55, type: 3}
