@@ -9,7 +9,7 @@ public class Screenshotter : MonoBehaviour
     public int height = 256;
     public string iconFolderPath = "Items/Icons";
 
-    public List<ScreenshotTarget> targets;
+    public List<WorldItem> targets;
 
     Camera cam;
 
@@ -21,7 +21,14 @@ public class Screenshotter : MonoBehaviour
 
     IEnumerator Screenshot()
     {
-        foreach (ScreenshotTarget target in targets)
+        // Hide objects so they won't show up in each other's images
+        foreach (WorldItem target in targets)
+        {
+            target.gameObject.SetActive(false);
+            yield return null;
+        }
+
+        foreach (WorldItem target in targets)
         {
             GameObject go = target.gameObject;
             InventoryItem item = target.item;
