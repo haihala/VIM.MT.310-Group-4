@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEditor.Animations;
 
 public class PlayerAnimationUpdater : MonoBehaviour
 {
@@ -10,10 +8,10 @@ public class PlayerAnimationUpdater : MonoBehaviour
     public CharacterController characterController;
     public Transform modelTransform;
     public Animator modelAnimator;
-    public AnimatorController idleAnimations;
-    public AnimatorController runAnimations;
-    public AnimatorController jumpAnimations;
-    public AnimatorController fallAnimations;
+    public RuntimeAnimatorController idleAnimations;
+    public RuntimeAnimatorController runAnimations;
+    public RuntimeAnimatorController jumpAnimations;
+    public RuntimeAnimatorController fallAnimations;
 
     public float modelRotationSpeed;
 

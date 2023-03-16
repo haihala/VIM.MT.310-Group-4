@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -77,8 +78,8 @@ public class Screenshotter : MonoBehaviour
 
         byte[] bytes = screenShot.EncodeToPNG();
         System.IO.File.WriteAllBytes(fullPath, bytes);
-#if UNITY_EDITOR
         AssetDatabase.Refresh();
-#endif
     }
 }
+
+#endif
