@@ -16,6 +16,7 @@ public class PlayerMover : MonoBehaviour
     public Vector3 horizontalVelocity;
     public Vector3 verticalVelocity;
     Vector2 inputMovement;
+    bool jumping;
 
     float horizontalRot;
 
@@ -24,14 +25,19 @@ public class PlayerMover : MonoBehaviour
         horizontalRot = cameraPivotHorizontal.localRotation.eulerAngles.y;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         horizontalVelocity = new Vector3(0, 0, 0);
         horizontalVelocity += cameraPivotHorizontal.forward * movementSpeed * inputMovement.y;
         horizontalVelocity += cameraPivotHorizontal.right * movementSpeed * inputMovement.x;
+
         if (!characterController.isGrounded)
         {
-            verticalVelocity.y -= gravity;
+            verticalVelocity.y -= gravity * Time.deltaTime;
+        }
+        else if (jumping)
+        {
+            verticalVelocity.y = jumpImpulse;
         }
 
         characterController.Move((horizontalVelocity + verticalVelocity) * Time.deltaTime);
@@ -44,9 +50,6 @@ public class PlayerMover : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext value)
     {
-        if (characterController.isGrounded && value.ReadValue<float>() > 0)
-        {
-            verticalVelocity.y = jumpImpulse;
-        }
+        jumping = value.ReadValue<float>() > 0;
     }
 }

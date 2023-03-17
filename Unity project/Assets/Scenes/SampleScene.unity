@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -377,7 +377,7 @@ MonoBehaviour:
   cameraPivotHorizontal: {fileID: 420131134}
   movementSpeed: 3
   jumpImpulse: 8
-  gravity: 0.2
+  gravity: 20
   horizontalVelocity: {x: 0, y: 0, z: 0}
   verticalVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &138586852
