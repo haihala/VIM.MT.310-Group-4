@@ -1445,6 +1445,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hearingPlayer: 0
+--- !u!136 &1622711949
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622711942}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &1622711950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622711942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b87626e0d6654549b9747c9f7fc9680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intersectingColliders: []
+  layers: 03000000
 --- !u!1 &1626803949
 GameObject:
   m_ObjectHideFlags: 0
