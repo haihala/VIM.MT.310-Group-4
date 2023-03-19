@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Guard : MonoBehaviour
+public class GuardBehavior : MonoBehaviour
 {
     public List<Transform> targets;
     int targetIndex = -1;
