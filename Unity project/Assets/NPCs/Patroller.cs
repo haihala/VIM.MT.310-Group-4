@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class GuardBehavior : MonoBehaviour
+public class Patroller : MonoBehaviour
 {
     public List<Transform> targets;
-    int targetIndex = -1;
+    int targetIndex = 0;
 
     NavMeshAgent agent;
 
-    void Start()
+    void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
     }
@@ -21,7 +21,6 @@ public class GuardBehavior : MonoBehaviour
         agent.destination = targets[targetIndex].position;
     }
 
-
     void Update()
     {
         // Choose the next destination point when the agent gets
@@ -30,5 +29,10 @@ public class GuardBehavior : MonoBehaviour
         {
             GotoNextPoint();
         }
+    }
+
+    public void Continue()
+    {
+        agent.destination = targets[targetIndex].position;
     }
 }

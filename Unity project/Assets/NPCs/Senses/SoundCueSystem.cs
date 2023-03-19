@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class SoundCueSystem : MonoBehaviour
 {
-    // Singleton boilerplate
     private static SoundCueSystem _instance;
-    public static SoundCueSystem Instance { get { return _instance; } }
+    public static SoundCue Instance { get { return _instance.soundEvents; } }
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -16,9 +15,9 @@ public class SoundCueSystem : MonoBehaviour
         else
         {
             _instance = this;
-            this.guards = new SoundCue();
+            this.soundEvents = new SoundCue();
         }
     }
 
-    public SoundCue guards;
+    public SoundCue soundEvents;
 }

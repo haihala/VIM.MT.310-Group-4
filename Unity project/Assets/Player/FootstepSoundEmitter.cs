@@ -17,7 +17,7 @@ public class FootstepSoundEmitter : MonoBehaviour
     {
         if (playerMover.horizontalVelocity.magnitude > velocityThreshold)
         {
-            SoundCueSystem.Instance.guards.Invoke(transform.position, audibleDistance);
+            SoundCueSystem.Instance.Invoke(transform.position, audibleDistance);
         }
     }
 }

@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sight : MonoBehaviour
+public class Sight : Sense
 {
-    public List<GameObject> visibleTargets;
     public List<GameObject> targets;
     public List<int> ignoredLayers;
 
     public float viewDistance;
     public float viewAngle;
     int layerMask;
+
 
     void Start()
     {
@@ -24,7 +24,11 @@ public class Sight : MonoBehaviour
 
     void Update()
     {
-        visibleTargets = targets.FindAll(Visible);
+        UpdateSuspicions(
+            targets
+                .FindAll(Visible)
+                .ConvertAll(GameObjectToSuspicion)
+        );
     }
 
     bool Visible(GameObject target)
