@@ -1434,8 +1434,8 @@ MonoBehaviour:
   targets:
   - {fileID: 138586843}
   ignoredLayers: 03000000
-  viewDistance: 5
-  viewAngle: 60
+  viewDistance: 10
+  viewAngle: 70
 --- !u!114 &1622711948
 MonoBehaviour:
   m_ObjectHideFlags: 0
