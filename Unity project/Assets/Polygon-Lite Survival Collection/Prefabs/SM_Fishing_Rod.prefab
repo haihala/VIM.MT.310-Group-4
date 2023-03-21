@@ -95,7 +95,9 @@ GameObject:
   - component: {fileID: 4133181791486119018}
   - component: {fileID: 2213789392637819040}
   - component: {fileID: 2476934274082270574}
+  - component: {fileID: 202048564456779824}
   - component: {fileID: 1564050592}
+  - component: {fileID: 3253417241992858675}
   m_Layer: 0
   m_Name: SM_Fishing_Rod
   m_TagString: Untagged
@@ -184,6 +186,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5300005754084542252, guid: a299e3c11d167104da0e6fa164084e76, type: 3}
+--- !u!114 &202048564456779824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412090124883188085}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.9339623, g: 0.7965213, b: 0.18943575, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &1564050592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +217,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: c79bfecf6e25a9f4889bbd3a6bf3ac3c, type: 2}
+--- !u!114 &3253417241992858675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412090124883188085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28e83dc45275a048abb44106c3ffc89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6556030392204959031
 GameObject:
   m_ObjectHideFlags: 0
