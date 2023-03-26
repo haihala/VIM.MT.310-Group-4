@@ -33,7 +33,7 @@ public abstract class Sense : MonoBehaviour
                 {
                     old.point = incoming.point;
                     old.intensity = Mathf.Min(
-                        old.intensity + (incoming.intensity + intensityGain) * Time.deltaTime,
+                        old.intensity + (intensityGain * incoming.intensity) * Time.deltaTime,
                         maxIntensity
                     );
                     merged = true;

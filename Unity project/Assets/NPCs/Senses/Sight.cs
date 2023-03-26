@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Sight : Sense
 {
-    public List<GameObject> targets;
     public List<int> ignoredLayers;
 
     public float viewDistance;
@@ -25,7 +24,7 @@ public class Sight : Sense
     void Update()
     {
         UpdateSuspicions(
-            targets
+            new List<GameObject>(GameObject.FindGameObjectsWithTag("Player"))
                 .FindAll(Visible)
                 .ConvertAll(GameObjectToSuspicion)
         );

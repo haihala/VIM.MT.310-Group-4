@@ -19,8 +19,8 @@ public class Hearing : Sense
 
     void Hear(Vector3 position, float maxDistance)
     {
-        float intensity = (position - transform.position).magnitude - maxDistance;
-        if (intensity > 0)
+        float intensity = maxDistance / (position - transform.position).magnitude;
+        if (intensity > 1)
         {
             newEvents.Add(new Suspicion(position, intensity));
         }
