@@ -26,7 +26,7 @@ public class Chore : Interactable
 
     void FixedUpdate()
     {
-        if (timeToCompletion < Time.time - startedAt)
+        if (GetProgress() > 1)
         {
             // Done
             if (modelWhenDone)
@@ -38,5 +38,12 @@ public class Chore : Interactable
 
             player.EndInteracting();
         }
+    }
+
+    public float GetProgress()
+    {
+        if (startedAt == null) return 0;
+        float timeUsed = Time.time - (float)startedAt;
+        return timeUsed / timeToCompletion;
     }
 }

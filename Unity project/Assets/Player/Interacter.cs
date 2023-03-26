@@ -5,10 +5,11 @@ using UnityEngine.InputSystem;
 
 public class Interacter : MonoBehaviour
 {
+    public ChoreProgressBar progressBar;
     [SerializeField]
     float range = 1;
     Interactable focusItem;
-    Interactable activeItem;
+    Chore activeChore;
 
     void FixedUpdate()
     {
@@ -46,6 +47,11 @@ public class Interacter : MonoBehaviour
                 focusItem.Highlight();
             }
         }
+
+        if (activeChore)
+        {
+            progressBar.SetProgress(activeChore.GetProgress());
+        }
     }
 
     public void OnInteract(InputAction.CallbackContext value)
@@ -59,17 +65,19 @@ public class Interacter : MonoBehaviour
 
     public bool Interacting()
     {
-        return activeItem != null;
+        return activeChore != null;
     }
 
-    public void StartInteracting(Interactable target)
+    public void StartInteracting(Chore target)
     {
-        activeItem = target;
+        activeChore = target;
+        progressBar.SetProgress(0);
     }
 
     public void EndInteracting()
     {
-        activeItem = null;
+        activeChore = null;
+        progressBar.SetProgress(0);
     }
 
 }
