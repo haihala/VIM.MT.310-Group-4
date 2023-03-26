@@ -8,6 +8,7 @@ public class Interacter : MonoBehaviour
     [SerializeField]
     float range = 1;
     Interactable focusItem;
+    Interactable activeItem;
 
     void FixedUpdate()
     {
@@ -55,4 +56,20 @@ public class Interacter : MonoBehaviour
             focusItem = null;   // Fixes a bug on higher refresh rates
         }
     }
+
+    public bool Interacting()
+    {
+        return activeItem != null;
+    }
+
+    public void StartInteracting(Interactable target)
+    {
+        activeItem = target;
+    }
+
+    public void EndInteracting()
+    {
+        activeItem = null;
+    }
+
 }

@@ -9,11 +9,13 @@ public class Chore : Interactable
     [SerializeField]
     GameObject modelWhenDone;
     float? startedAt;
+    Interacter player;
 
     public override void OnInteract(GameObject player)
     {
-        // TODO: Lock player into animation
         startedAt = Time.time;
+        this.player = player.GetComponent<Interacter>();
+        this.player.StartInteracting(this);
     }
 
 
@@ -27,9 +29,14 @@ public class Chore : Interactable
         if (timeToCompletion < Time.time - startedAt)
         {
             // Done
-            GameObject obj = Instantiate(modelWhenDone);
-            obj.transform.position = transform.position;
+            if (modelWhenDone)
+            {
+                GameObject obj = Instantiate(modelWhenDone);
+                obj.transform.position = transform.position;
+            }
             Destroy(gameObject);
+
+            player.EndInteracting();
         }
     }
 }

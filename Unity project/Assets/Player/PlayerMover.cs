@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerMover : MonoBehaviour
 {
+    [SerializeField]
+    Interacter interacter;
     public CharacterController characterController;
     public Transform cameraPivotHorizontal;
 
@@ -27,6 +29,13 @@ public class PlayerMover : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (interacter.Interacting())
+        {
+            // Don't move if interacting with something
+            // Not a perfect solution
+            return;
+        }
+
         horizontalVelocity = new Vector3(0, 0, 0);
         horizontalVelocity += cameraPivotHorizontal.forward * movementSpeed * inputMovement.y;
         horizontalVelocity += cameraPivotHorizontal.right * movementSpeed * inputMovement.x;

@@ -245,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7805bbb5e4738c54ca8ff1a826272c04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interacter: {fileID: 436759148290552142}
   characterController: {fileID: 436759148290552135}
   cameraPivotHorizontal: {fileID: 436759148035222168}
   movementSpeed: 3
