@@ -15,25 +15,37 @@ public abstract class Interactable : MonoBehaviour
     [SerializeField]
     Color inActiveoutlineColor = Color.white;
     Outline outline;
+    bool highlighted;
 
     protected virtual void Start()
     {
         outline = GetComponent<Outline>();
         outline.OutlineMode = Outline.Mode.OutlineVisible;
         outline.enabled = true;
-        UnHighlight();
     }
 
-    public virtual void Highlight()
+    public void Highlight()
     {
-        outline.OutlineColor = activeoutlineColor;
-        outline.OutlineWidth = activeoutlineThickness;
+        highlighted = true;
     }
 
-    public virtual void UnHighlight()
+    public void UnHighlight()
     {
-        outline.OutlineColor = inActiveoutlineColor;
-        outline.OutlineWidth = inActiveoutlineThickness;
+        highlighted = false;
+    }
+
+    void Update()
+    {
+        if (highlighted)
+        {
+            outline.OutlineColor = activeoutlineColor;
+            outline.OutlineWidth = activeoutlineThickness;
+        }
+        else
+        {
+            outline.OutlineColor = inActiveoutlineColor;
+            outline.OutlineWidth = inActiveoutlineThickness;
+        }
     }
 
     public abstract void OnInteract(GameObject player);

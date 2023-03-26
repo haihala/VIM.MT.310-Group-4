@@ -257,6 +257,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1948875872 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 109519452056230297, guid: 3780fcc759759fa4fbc1e6816566840c, type: 3}
+  m_PrefabInstance: {fileID: 436759148151970726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2080241455
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,6 +370,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 436759148290552128, guid: 3780fcc759759fa4fbc1e6816566840c, type: 3}
+      propertyPath: model
+      value: 
+      objectReference: {fileID: 1948875872}
     - target: {fileID: 436759148290552128, guid: 3780fcc759759fa4fbc1e6816566840c, type: 3}
       propertyPath: inventoryBar
       value: 

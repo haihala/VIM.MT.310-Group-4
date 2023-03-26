@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15979b1803535714fa136aa30be8d2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  background: {fileID: 289261806634243762}
   icon: {fileID: 4041926307087304006}
   label: {fileID: 4041926307585177935}
 --- !u!1 &4041926307087304024
@@ -324,7 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.41960785}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

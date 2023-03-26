@@ -32,6 +32,9 @@ public class Interacter : MonoBehaviour
 
         if (newFocus != focusItem)
         {
+            print("Focus change");
+            print(focusItem);
+            print(newFocus);
             // Change in focus
             if (focusItem)
             {

@@ -429,6 +429,54 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ee96bd39-dcda-4b4a-89f7-3023bec883c2
     m_ActionName: Basic action map/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 436759148290552128}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: OnNextItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d334b547-f4ac-4ce0-a379-dc2bdf406be3
+    m_ActionName: Basic action map/Next item[/Mouse/scroll/up]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 436759148290552128}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: OnPreviousItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fcd0231f-f61a-478b-a66f-3db813fcd33c
+    m_ActionName: Basic action map/Previous item[/Mouse/scroll/down]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 436759148290552128}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: OnDropItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d683ff3a-3452-4536-9976-ff852df21a2a
+    m_ActionName: Basic action map/Drop item[/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Basic action map
@@ -539,6 +587,7 @@ MonoBehaviour:
   contents: []
   slotPrefab: {fileID: 4041926307002279939, guid: b3ced54d846e4434a9eadf50d9760299, type: 3}
   inventoryBar: {fileID: 0}
+  interactionCooldown: 0.1
 --- !u!114 &436759148290552129
 MonoBehaviour:
   m_ObjectHideFlags: 0

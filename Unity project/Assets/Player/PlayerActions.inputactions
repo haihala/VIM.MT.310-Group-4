@@ -40,6 +40,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Next item",
+                    "type": "Value",
+                    "id": "d334b547-f4ac-4ce0-a379-dc2bdf406be3",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Previous item",
+                    "type": "Value",
+                    "id": "fcd0231f-f61a-478b-a66f-3db813fcd33c",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Drop item",
+                    "type": "Button",
+                    "id": "d683ff3a-3452-4536-9976-ff852df21a2a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -227,6 +254,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "89584004-b638-49cf-b741-15cfc6cadd01",
+                    "path": "<Mouse>/scroll/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Next item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "056e64e1-a3b5-400b-8df9-f5f0a6cf6582",
+                    "path": "<Mouse>/scroll/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Previous item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c80196ac-d9aa-49eb-9b37-9396fbdd78c8",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Drop item",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
