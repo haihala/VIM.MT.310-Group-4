@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Outline))]
 public abstract class Interactable : MonoBehaviour
 {
+    public float extraInteractionRange;
     [SerializeField]
     float activeoutlineThickness = 6;
     [SerializeField]

@@ -18,7 +18,7 @@ public class Interacter : MonoBehaviour
 
         foreach (Interactable item in GameObject.FindObjectsOfType<Interactable>())
         {
-            float distance = (transform.position - item.gameObject.transform.position).magnitude;
+            float distance = (transform.position - item.gameObject.transform.position).magnitude - item.extraInteractionRange;
 
             bool inRange = distance < range;
             bool closestObject = distance < shortestDistance;
@@ -30,11 +30,9 @@ public class Interacter : MonoBehaviour
         }
 
 
+
         if (newFocus != focusItem)
         {
-            print("Focus change");
-            print(focusItem);
-            print(newFocus);
             // Change in focus
             if (focusItem)
             {
