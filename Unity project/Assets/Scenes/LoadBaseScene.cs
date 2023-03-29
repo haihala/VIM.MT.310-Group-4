@@ -8,5 +8,6 @@ public class LoadBaseScene : MonoBehaviour
     void Awake()
     {
         SceneManager.LoadScene("Base", LoadSceneMode.Additive);
+        Destroy(gameObject);
     }
 }

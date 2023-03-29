@@ -370,6 +370,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 436759148035222168, guid: 3780fcc759759fa4fbc1e6816566840c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 436759148035222168, guid: 3780fcc759759fa4fbc1e6816566840c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 436759148290552128, guid: 3780fcc759759fa4fbc1e6816566840c, type: 3}
       propertyPath: model
       value: 
@@ -425,6 +433,22 @@ PrefabInstance:
     - target: {fileID: 436759148290552189, guid: 3780fcc759759fa4fbc1e6816566840c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 436759149830710834, guid: 3780fcc759759fa4fbc1e6816566840c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 436759149830710834, guid: 3780fcc759759fa4fbc1e6816566840c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 436759149830710837, guid: 3780fcc759759fa4fbc1e6816566840c, type: 3}
+      propertyPath: field of view
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 436759149830710837, guid: 3780fcc759759fa4fbc1e6816566840c, type: 3}
+      propertyPath: near clip plane
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3780fcc759759fa4fbc1e6816566840c, type: 3}
