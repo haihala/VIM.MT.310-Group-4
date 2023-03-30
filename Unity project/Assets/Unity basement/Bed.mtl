@@ -1,0 +1,59 @@
+newmtl BackSG
+illum 4
+Kd 0.44 0.44 0.44
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.35 1.35 1.35
+Ns 2.00
+newmtl BoxSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl CircleSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 98.00
+newmtl DryerFBXASC032BoxSG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.27 0.27 0.27
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.70 0.70 0.70
+Ns 14.00
+newmtl MonsterCyclops_blinn1SG
+illum 4
+Kd 0.92 0.68 0.54
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl Plane005SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl buttonFBXASC03201SG
+illum 4
+Kd 0.09 0.09 0.09
+Ka 0.06 0.06 0.06
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.27 0.27 0.27
+Ns 14.00
+newmtl initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
