@@ -1,0 +1,154 @@
+[33mcommit 00100ec38181f54184b9672af9c8f356ef5e8db1[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Sun Mar 19 16:07:41 2023 +0200
+
+    Save the scene with the guard
+
+[33mcommit 1a9805cbd4bea49250ccbc1bafff281aa398cbfa[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Sun Mar 19 16:05:58 2023 +0200
+
+    Guards will investigate
+
+[33mcommit a9f00f2954c723bbf436f4993f9274fdd75f30ea[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Sun Mar 19 12:39:46 2023 +0200
+
+    Guards recognize when being touched
+
+[33mcommit 1b867eee539a18d6b1b4fb0a01b38dc7f8b5d773[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Sun Mar 19 12:25:52 2023 +0200
+
+    Guards can hear the player
+
+[33mcommit 2fb546819f61d014b071e38a1d7125e851673815[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Sun Mar 19 11:52:34 2023 +0200
+
+    Guard can see the player
+
+[33mcommit 745fd02f0d1377e029d6152b8804aea301de927e[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Sun Mar 19 11:18:52 2023 +0200
+
+    Add a guard that patrols around obstacles
+
+[33mcommit 566ec0a22dc0a86cb470545d3ab1762d59e659d3[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Fri Mar 17 13:26:15 2023 +0200
+
+    Maybe fix inconsistent jump height
+    
+    Likely a problem that's related to the framerate of the game (jumping
+    twice on consequtive frames). Not a 100% sure this fixes the problem as
+    I can't replicate it.
+
+[33mcommit 490bf37d5e2edea4d102f1f87783cd1b64ae88ab[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Thu Mar 16 17:24:34 2023 +0200
+
+    Prepare project for building
+
+[33mcommit d3ce1afd914abb26a3be61ffc43e8b2a7c004e61[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Thu Mar 16 10:05:59 2023 +0200
+
+    Add WorldItem component to fishing rod prefab
+
+[33mcommit 700762d0b9e9c375fbb0cebcb19705759ca7f903[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Thu Mar 16 09:50:38 2023 +0200
+
+    Remove unnecessary script and ensure items don't leak to one another's icons
+
+[33mcommit 80211c729118ad417f19a0fdedc33440ca55222c[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Wed Mar 15 22:19:22 2023 +0200
+
+    Inventory system
+
+[33mcommit 4596852c85a4b0b39a776e88d2502ac4d384269e[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Wed Mar 15 19:42:12 2023 +0200
+
+    Upgrade to unity 2021.3.21
+
+[33mcommit c951c78ca5f09ea53fcffab4d50ad26114b3aecd[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Wed Mar 15 17:17:08 2023 +0200
+
+    Added a box
+
+[33mcommit a0526d354e9283f7adda84b5004ec88ffa391701[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Wed Mar 15 17:16:03 2023 +0200
+
+    Made player move with arrow keys
+
+[33mcommit 0cdf56dc55f31d7cd89aaf1776756394826ecb53[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Mon Mar 13 21:23:41 2023 +0200
+
+    Split character script into smaller descriptive scripts
+    
+    Also fix an issue with mouse movement. Previously only the direction of
+    mouse movements was considered. Now speed is also a factor. This means
+    that the same mouse movement distance should now cause the same rotation
+    regardless of the speed the player moves the mouse.
+
+[33mcommit 200ff34dc2d8ab41d1b85a59db6e64b2082fd563[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Sat Mar 11 11:38:15 2023 +0200
+
+    Jumping animation
+
+[33mcommit 16ecf7bf995fc8cb40fe04e27e60502dba3bb770[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Sat Mar 11 11:22:06 2023 +0200
+
+    Make the character animate when running
+
+[33mcommit f0f1124b12a41444dee4437c8ef5d23d7d5715a4[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Sat Mar 11 09:47:39 2023 +0200
+
+    Add a stock dummy model
+    
+    Fix camera rotation to not rotate the model as well.
+
+[33mcommit 1049afd49adbbf24397d9a7e5240679916389e73[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Sat Mar 11 09:22:09 2023 +0200
+
+    Make camera rotate up and down
+
+[33mcommit d6842e81b1805fd4b9d1a79afa84315d42ec05c6[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Fri Mar 10 20:43:20 2023 +0200
+
+    De-jank character controls
+
+[33mcommit e0bad1e1b39f67fc117fca70757140c6e5ee18c7[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Fri Mar 10 20:20:12 2023 +0200
+
+    Basic controls
+
+[33mcommit 4a24515ab9fcba48ea9743d3fd06bf2e78f7af84[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Fri Mar 10 18:39:22 2023 +0200
+
+    Add unity project template
+
+[33mcommit 1ae98f6ff0afa4bfda37124553801369e9615597[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Fri Mar 10 18:38:53 2023 +0200
+
+    Add gitignore
+
+[33mcommit c3ccb4e4a807d02f40cdd997c83ff7f6da758d65[m
+Author: Eero Häihälä <eero.haihala@gmail.com>
+Date:   Fri Mar 10 18:33:16 2023 +0200
+
+    Add README.md
