@@ -7,10 +7,12 @@ public class PlayerMover : MonoBehaviour
 {
     [SerializeField]
     Interacter interacter;
-    public CharacterController characterController;
+    CharacterController characterController;
+    Croucher croucher;
     public Transform cameraPivotHorizontal;
 
-    public float movementSpeed;
+    public float crouchingSpeed;
+    public float standingSpeed;
     public float jumpImpulse;
     public float gravity;
 
@@ -25,6 +27,8 @@ public class PlayerMover : MonoBehaviour
     void Start()
     {
         horizontalRot = cameraPivotHorizontal.localRotation.eulerAngles.y;
+        characterController = GetComponent<CharacterController>();
+        croucher = GetComponent<Croucher>();
     }
 
     void FixedUpdate()
@@ -37,6 +41,9 @@ public class PlayerMover : MonoBehaviour
         }
 
         horizontalVelocity = new Vector3(0, 0, 0);
+
+        float movementSpeed = croucher.crouching ? crouchingSpeed : standingSpeed;
+
         horizontalVelocity += cameraPivotHorizontal.forward * movementSpeed * inputMovement.y;
         horizontalVelocity += cameraPivotHorizontal.right * movementSpeed * inputMovement.x;
 

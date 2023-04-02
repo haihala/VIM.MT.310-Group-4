@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 436759148290552142}
   - component: {fileID: 436759148290552128}
   - component: {fileID: 436759148290552129}
+  - component: {fileID: 7393910668611810668}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -139,8 +140,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436759148290552189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.79, y: 0.61, z: -7.64}
-  m_LocalScale: {x: 0.7, y: 0.5, z: 0.7}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.5, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 436759148035222168}
@@ -285,6 +286,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d683ff3a-3452-4536-9976-ff852df21a2a
     m_ActionName: Basic action map/Drop item[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7393910668611810668}
+        m_TargetAssemblyTypeName: Croucher, Assembly-CSharp
+        m_MethodName: OnInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a9bf35d5-46cc-4f54-8418-44a255a74388
+    m_ActionName: Basic action map/Crouch[/XInputControllerWindows/buttonNorth,/Keyboard/ctrl]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Basic action map
@@ -301,13 +318,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2.1
+  m_Height: 1.35
   m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.3, z: 0}
 --- !u!114 &436759148290552133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,9 +338,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interacter: {fileID: 436759148290552142}
-  characterController: {fileID: 436759148290552135}
   cameraPivotHorizontal: {fileID: 436759148035222168}
-  movementSpeed: 3
+  crouchingSpeed: 1
+  standingSpeed: 3
   jumpImpulse: 8
   gravity: 20
   horizontalVelocity: {x: 0, y: 0, z: 0}
@@ -357,10 +374,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e310ab8b58bd104aa0db5c38bdd1a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMover: {fileID: 436759148290552133}
   characterController: {fileID: 436759148290552135}
   modelTransform: {fileID: 109519452056230297}
   modelAnimator: {fileID: 6297505109361509347}
+  crouchAnimations: {fileID: 9100000, guid: a728c1663e495254984f690185666fe2, type: 2}
   idleAnimations: {fileID: 9100000, guid: a8555c0cff30527479e32562cef9141f, type: 2}
   runAnimations: {fileID: 9100000, guid: eb79e3fd0dd669f40a90a984b92a0ccf, type: 2}
   jumpAnimations: {fileID: 9100000, guid: 54ff599963ec97843ad4d4ddeeb61810, type: 2}
@@ -412,6 +429,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audibleDistance: 10
   velocityThreshold: 0.5
+--- !u!114 &7393910668611810668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436759148290552189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288d84d32cd37694098072446706c46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crouching: 0
+  crouchingHeight: 0.85
 --- !u!1 &436759149371744094
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +659,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -7252228434403314338, guid: 81bb9eea30387e442899949a80011e55, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -6862335555181247977, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -807,7 +842,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: a8555c0cff30527479e32562cef9141f, type: 2}
+      objectReference: {fileID: 9100000, guid: d5d577f86e71ef04ca74edb22a7d411e, type: 2}
     - target: {fileID: 5866666021909216657, guid: 81bb9eea30387e442899949a80011e55, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerAnimationUpdater : MonoBehaviour
 {
-    public PlayerMover playerMover;
     public CharacterController characterController;
     public Transform modelTransform;
     public Animator modelAnimator;
+    public RuntimeAnimatorController crouchAnimations;
     public RuntimeAnimatorController idleAnimations;
     public RuntimeAnimatorController runAnimations;
     public RuntimeAnimatorController jumpAnimations;
@@ -15,9 +15,18 @@ public class PlayerAnimationUpdater : MonoBehaviour
 
     public float modelRotationSpeed;
 
+    PlayerMover playerMover;
+    Croucher croucher;
+
+    void Start()
+    {
+        croucher = GetComponent<Croucher>();
+        playerMover = GetComponent<PlayerMover>();
+    }
 
     void Update()
     {
+        bool crouching = croucher.crouching;
         bool moving = playerMover.horizontalVelocity != Vector3.zero;
         if (moving)
         {
@@ -28,6 +37,7 @@ public class PlayerAnimationUpdater : MonoBehaviour
             );
         }
 
+        modelAnimator.speed = 1;
         if (!characterController.isGrounded)
         {
             if (playerMover.verticalVelocity.y > 0)
@@ -41,15 +51,29 @@ public class PlayerAnimationUpdater : MonoBehaviour
                 modelAnimator.runtimeAnimatorController = fallAnimations;
             }
         }
-        else if (moving)
+        else if (moving && crouching)
+        {
+            // Sneaking
+            modelAnimator.runtimeAnimatorController = crouchAnimations;
+        }
+        else if (moving && !crouching)
         {
             // Running
             modelAnimator.runtimeAnimatorController = runAnimations;
         }
-        else
+        else if (!moving && crouching)
+        {
+            // Crouch idle
+            modelAnimator.runtimeAnimatorController = crouchAnimations;
+            modelAnimator.speed = 0;
+            // Instead of a crouch idle state, just stop the sneak animation
+            // Not the best approach,  but it's pretty good
+        }
+        else if (!moving && !crouching)
         {
             // Standing
             modelAnimator.runtimeAnimatorController = idleAnimations;
         }
+
     }
 }
