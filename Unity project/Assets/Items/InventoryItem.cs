@@ -5,6 +5,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(menuName = "Inventory Item")]
+[Serializable]
 public class InventoryItem : ScriptableObject
 {
     public string id;

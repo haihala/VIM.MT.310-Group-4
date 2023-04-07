@@ -1,7 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Chore : Interactable
 {
+    [SerializeField]
+    List<InventoryItem> toolRequirements;
+
     [SerializeField]
     float timeToCompletion = 1;
     [SerializeField]
@@ -9,11 +14,14 @@ public class Chore : Interactable
     float? startedAt;
     Interacter player;
 
-    public override void OnInteract(GameObject player, InventoryItem target)
+    public override void OnInteract(GameObject player, InventoryItem tool)
     {
-        startedAt = Time.time;
-        this.player = player.GetComponent<Interacter>();
-        this.player.StartInteracting(this);
+        if (toolRequirements.Count == 0 || toolRequirements.Contains(tool))
+        {
+            startedAt = Time.time;
+            this.player = player.GetComponent<Interacter>();
+            this.player.StartInteracting(this);
+        }
     }
 
 

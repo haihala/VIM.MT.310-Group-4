@@ -15,4 +15,4 @@ MonoBehaviour:
   id: Fishing_rod
   displayName: Fishing rod
   icon: {fileID: 21300000, guid: 1931c27ab6de8f34a9385cf06f8e3836, type: 3}
-  prefab: {fileID: 0}
+  prefab: {fileID: 412090124883188085, guid: 65c61591445ed8245b88a9bd45165f5b, type: 3}
