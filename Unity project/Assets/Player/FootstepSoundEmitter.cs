@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class FootstepSoundEmitter : MonoBehaviour
 {
-    public float audibleDistance;
+    public float runningDistance;
+    public float sneakingDistance;
     public float velocityThreshold;
     PlayerMover playerMover;
+    Croucher croucher;
 
     void Start()
     {
         playerMover = GetComponent<PlayerMover>();
+        croucher = GetComponent<Croucher>();
     }
 
     void FixedUpdate()
     {
         if (playerMover.horizontalVelocity.magnitude > velocityThreshold)
         {
-            SoundCueSystem.Instance.Invoke(transform.position, audibleDistance);
+            // Make sound
+            float volume = croucher.crouching ? sneakingDistance : runningDistance;
+            SoundCueSystem.Instance.Invoke(transform.position, runningDistance);
         }
     }
 }

@@ -427,7 +427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f7602b7374ae74bbcf073b741c5070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audibleDistance: 10
+  runningDistance: 10
+  sneakingDistance: 1
   velocityThreshold: 0.5
 --- !u!114 &7393910668611810668
 MonoBehaviour:
