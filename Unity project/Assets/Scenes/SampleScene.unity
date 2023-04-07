@@ -477,7 +477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8802352009640409669, guid: 25f3a4be5da48b1498cf9b1457be19d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.08100003
+      value: 0.021
       objectReference: {fileID: 0}
     - target: {fileID: 8802352009640409669, guid: 25f3a4be5da48b1498cf9b1457be19d7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1102,6 +1102,7 @@ MonoBehaviour:
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   inactiveMaterial: {fileID: 0}
   activeMaterial: {fileID: 0}
+  toolRequirements: []
   timeToCompletion: 2
   modelWhenDone: {fileID: 3918036935182654285, guid: b5991b8efe7e0044888b9058f6d3119f, type: 3}
 --- !u!114 &1295103838
