@@ -1,28 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 [RequireComponent(typeof(Outline))]
 public abstract class Interactable : MonoBehaviour
 {
     public float extraInteractionRange;
+
+    // For outlines
     [SerializeField]
     float activeoutlineThickness = 6;
     [SerializeField]
-    Color activeoutlineColor = Color.yellow;
-
-    [SerializeField]
     float inActiveoutlineThickness = 4;
     [SerializeField]
+    Color activeoutlineColor = Color.yellow;
+    [SerializeField]
     Color inActiveoutlineColor = Color.white;
+
+    // For decals
+    [SerializeField]
+    Material inactiveMaterial;
+    [SerializeField]
+    Material activeMaterial;
+
     Outline outline;
+    DecalProjector decalProjector;
     bool highlighted;
 
     protected virtual void Start()
     {
         outline = GetComponent<Outline>();
-        outline.OutlineMode = Outline.Mode.OutlineVisible;
-        outline.enabled = true;
+        if (outline)
+        {
+            outline.OutlineMode = Outline.Mode.OutlineVisible;
+        }
+
+        decalProjector = GetComponent<DecalProjector>();
     }
 
     public void Highlight()
@@ -39,13 +53,31 @@ public abstract class Interactable : MonoBehaviour
     {
         if (highlighted)
         {
-            outline.OutlineColor = activeoutlineColor;
-            outline.OutlineWidth = activeoutlineThickness;
+            if (outline)
+            {
+                outline.OutlineColor = activeoutlineColor;
+                outline.OutlineWidth = activeoutlineThickness;
+                outline.OutlineMode = Outline.Mode.OutlineAll;
+            }
+
+            if (decalProjector)
+            {
+                decalProjector.material = activeMaterial;
+            }
         }
         else
         {
-            outline.OutlineColor = inActiveoutlineColor;
-            outline.OutlineWidth = inActiveoutlineThickness;
+            if (outline)
+            {
+                outline.OutlineColor = inActiveoutlineColor;
+                outline.OutlineWidth = inActiveoutlineThickness;
+                outline.OutlineMode = Outline.Mode.OutlineVisible;
+            }
+
+            if (decalProjector)
+            {
+                decalProjector.material = inactiveMaterial;
+            }
         }
     }
 
