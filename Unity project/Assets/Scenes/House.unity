@@ -193,12 +193,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 0
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   toolRequirements: []
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
@@ -553,7 +553,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 30
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1415,12 +1415,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 1
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   lightSource: {fileID: 700862520}
 --- !u!114 &379719676
 MonoBehaviour:
@@ -1496,7 +1496,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 30
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1978,12 +1978,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 0
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   toolRequirements: []
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
@@ -2403,7 +2403,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2523,12 +2523,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 0
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   toolRequirements: []
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
@@ -2715,12 +2715,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 0
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   toolRequirements: []
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
@@ -2831,12 +2831,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 0
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   toolRequirements: []
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
@@ -3276,7 +3276,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 30
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -3415,7 +3415,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -3592,12 +3592,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 1
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   lightSource: {fileID: 1649228723}
 --- !u!114 &1009816977
 MonoBehaviour:
@@ -3673,7 +3673,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -3888,12 +3888,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 0
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   toolRequirements: []
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
@@ -3985,7 +3985,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -4281,7 +4281,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 30
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -4477,12 +4477,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 1
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   lightSource: {fileID: 1014136559}
 --- !u!114 &1250293280
 MonoBehaviour:
@@ -4591,12 +4591,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 0
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   toolRequirements: []
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
@@ -4868,12 +4868,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 1
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   lightSource: {fileID: 895109123}
 --- !u!114 &1361513426
 MonoBehaviour:
@@ -5438,12 +5438,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 0
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   toolRequirements: []
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
@@ -5478,12 +5478,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 0
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   toolRequirements: []
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
@@ -5614,12 +5614,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 0
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   toolRequirements: []
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
@@ -5918,7 +5918,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -6057,43 +6057,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8802352009640409669, guid: 25f3a4be5da48b1498cf9b1457be19d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.013155222
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 8802352009640409669, guid: 25f3a4be5da48b1498cf9b1457be19d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.44282767
+      value: 1.261
       objectReference: {fileID: 0}
     - target: {fileID: 8802352009640409669, guid: 25f3a4be5da48b1498cf9b1457be19d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.2762125
+      value: 4.62
       objectReference: {fileID: 0}
     - target: {fileID: 8802352009640409669, guid: 25f3a4be5da48b1498cf9b1457be19d7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.68321747
       objectReference: {fileID: 0}
     - target: {fileID: 8802352009640409669, guid: 25f3a4be5da48b1498cf9b1457be19d7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.10692686
       objectReference: {fileID: 0}
     - target: {fileID: 8802352009640409669, guid: 25f3a4be5da48b1498cf9b1457be19d7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.019712113
       objectReference: {fileID: 0}
     - target: {fileID: 8802352009640409669, guid: 25f3a4be5da48b1498cf9b1457be19d7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.72207475
       objectReference: {fileID: 0}
     - target: {fileID: 8802352009640409669, guid: 25f3a4be5da48b1498cf9b1457be19d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -10.054
       objectReference: {fileID: 0}
     - target: {fileID: 8802352009640409669, guid: 25f3a4be5da48b1498cf9b1457be19d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 7.439
       objectReference: {fileID: 0}
     - target: {fileID: 8802352009640409669, guid: 25f3a4be5da48b1498cf9b1457be19d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -93.823
       objectReference: {fileID: 0}
     - target: {fileID: 8802352009640409673, guid: 25f3a4be5da48b1498cf9b1457be19d7, type: 3}
       propertyPath: m_Name
@@ -6190,12 +6190,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 0
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   toolRequirements: []
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
@@ -6545,12 +6545,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 0
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   toolRequirements: []
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
@@ -7137,6 +7137,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: -7056331331353926976, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -7055260146887140412, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
@@ -7197,6 +7201,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: -2476762046959696678, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -1332551454230604492, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
@@ -7229,6 +7237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Masion_2.0
       objectReference: {fileID: 0}
+    - target: {fileID: 1471860367925762249, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1791984016497344248, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
@@ -7256,6 +7268,10 @@ PrefabInstance:
     - target: {fileID: 2963311074396670735, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3246470247203732536, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3602887604280909643, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -7304,6 +7320,10 @@ PrefabInstance:
     - target: {fileID: 7851664152650375762, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
       propertyPath: m_LocalScale.y
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894364485737933934, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9172166868520731230, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
       propertyPath: m_NavMeshLayer
@@ -7575,12 +7595,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 0
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   toolRequirements: []
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
@@ -7942,7 +7962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.943
+      value: 1.109
       objectReference: {fileID: 0}
     - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8109,12 +8129,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraInteractionRange: 0
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterialThickness: 0.2
+  inActiveMaterialThickness: 0.1
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 0}
-  activeMaterial: {fileID: 0}
   toolRequirements: []
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
