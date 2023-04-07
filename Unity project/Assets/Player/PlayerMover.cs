@@ -5,16 +5,22 @@ using UnityEngine.InputSystem;
 
 public class PlayerMover : MonoBehaviour
 {
-    [SerializeField]
-    Interacter interacter;
-    CharacterController characterController;
-    Croucher croucher;
-    public Transform cameraPivotHorizontal;
-
     public float crouchingSpeed;
     public float standingSpeed;
     public float jumpImpulse;
     public float gravity;
+
+    [SerializeField]
+    InventoryItem cowboyHat;
+    [SerializeField]
+    float cowboyHatSpeedBoost;
+
+    public Transform cameraPivotHorizontal;
+    Interacter interacter;
+    CharacterController characterController;
+    Croucher croucher;
+    Inventory inventory;
+
 
     // Set internally
     public Vector3 horizontalVelocity;
@@ -29,6 +35,8 @@ public class PlayerMover : MonoBehaviour
         horizontalRot = cameraPivotHorizontal.localRotation.eulerAngles.y;
         characterController = GetComponent<CharacterController>();
         croucher = GetComponent<Croucher>();
+        interacter = GetComponent<Interacter>();
+        inventory = GetComponent<Inventory>();
     }
 
     void FixedUpdate()
@@ -43,6 +51,11 @@ public class PlayerMover : MonoBehaviour
         horizontalVelocity = new Vector3(0, 0, 0);
 
         float movementSpeed = croucher.crouching ? crouchingSpeed : standingSpeed;
+
+        if (inventory.equipment == cowboyHat)
+        {
+            movementSpeed += cowboyHatSpeedBoost;
+        }
 
         horizontalVelocity += cameraPivotHorizontal.forward * movementSpeed * inputMovement.y;
         horizontalVelocity += cameraPivotHorizontal.right * movementSpeed * inputMovement.x;

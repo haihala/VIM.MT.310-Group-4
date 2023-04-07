@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92fe8a52896e8ff49bf4860ba05dc538, type: 3}
+  m_Name: CowboyHat
+  m_EditorClassIdentifier: 
+  id: Cowboy_hat
+  displayName: Cowboy hat
+  icon: {fileID: 21300000, guid: 29c43014af3c1be4b98e98adfbf46ab6, type: 3}
+  prefab: {fileID: 2296519583148378168, guid: ad86a024b3adea54880bc1554cc83710, type: 3}

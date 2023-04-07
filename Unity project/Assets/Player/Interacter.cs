@@ -10,9 +10,29 @@ public class Interacter : MonoBehaviour
     float range = 1;
     Interactable focusItem;
     Chore activeChore;
+    Inventory inventory;
+    bool interactPressed;
+
+    void Start()
+    {
+        inventory = GetComponent<Inventory>();
+    }
 
     void FixedUpdate()
     {
+        if (interactPressed)
+        {
+            if (focusItem)
+            {
+                focusItem.OnInteract(gameObject, inventory.SelectedItem());
+            }
+            else
+            {
+                inventory.SelectedItem().Use(gameObject);
+            }
+            interactPressed = false;
+        }
+
         Interactable newFocus = null;
         float shortestDistance = Mathf.Infinity;
 
@@ -57,11 +77,7 @@ public class Interacter : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext value)
     {
-        if (focusItem && value.ReadValue<float>() > 0)
-        {
-            focusItem.OnInteract(gameObject);
-            focusItem = null;   // Fixes a bug on higher refresh rates
-        }
+        interactPressed = value.ReadValue<float>() > 0;
     }
 
     public bool Interacting()

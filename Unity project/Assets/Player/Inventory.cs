@@ -5,6 +5,10 @@ using UnityEngine.InputSystem;
 
 public class Inventory : MonoBehaviour
 {
+    public Equipment equipment;
+    [SerializeField]
+    List<WorldItem> displayItems;
+
     [SerializeField]
     Transform model;
     [SerializeField]
@@ -101,17 +105,7 @@ public class Inventory : MonoBehaviour
             GameObject obj = Instantiate(SelectedItem().prefab);
             obj.transform.position = transform.position + dropDistance * model.forward;
 
-            contents.RemoveAt((int)selectedIndex);
-            Destroy(inventoryBar.GetChild((int)selectedIndex).gameObject);
-
-            if (contents.Count > 0)
-            {
-                SelectSlot((int)selectedIndex);
-            }
-            else
-            {
-                selectedIndex = null;
-            }
+            RemoveSelectedItem();
 
             lastDrop = Time.time;
         }
@@ -126,6 +120,41 @@ public class Inventory : MonoBehaviour
             return contents[(int)selectedIndex];
         }
         return null;
+    }
+
+    InventoryItem RemoveSelectedItem()
+    {
+        int index = (int)selectedIndex;
+        InventoryItem item = contents[index];
+
+        contents.RemoveAt(index);
+        Destroy(inventoryBar.GetChild(index).gameObject);
+
+        if (contents.Count > 0)
+        {
+            SelectSlot(index);
+        }
+        else
+        {
+            selectedIndex = null;
+        }
+        return item;
+    }
+
+    public void EquipSelected()
+    {
+        Equipment newEquip = (Equipment)RemoveSelectedItem();
+
+        if (equipment != null)
+        {
+            AddItem(equipment);
+        }
+        equipment = newEquip;
+
+        foreach (WorldItem displayItem in displayItems)
+        {
+            displayItem.gameObject.SetActive(equipment == displayItem.item);
+        }
     }
 
     public void OnNextItem(InputAction.CallbackContext value)
@@ -144,6 +173,5 @@ public class Inventory : MonoBehaviour
         {
             drop = true;
         }
-
     }
 }

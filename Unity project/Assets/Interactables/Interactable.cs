@@ -49,5 +49,5 @@ public abstract class Interactable : MonoBehaviour
         }
     }
 
-    public abstract void OnInteract(GameObject player);
+    public abstract void OnInteract(GameObject player, InventoryItem item);
 }

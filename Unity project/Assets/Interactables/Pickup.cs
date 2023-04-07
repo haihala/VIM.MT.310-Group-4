@@ -13,7 +13,7 @@ public class Pickup : Interactable
         base.Start();
     }
 
-    public override void OnInteract(GameObject player)
+    public override void OnInteract(GameObject player, InventoryItem selectedItem)
     {
         player.GetComponent<Inventory>().AddItem(item.item);
         Destroy(gameObject);

@@ -11,7 +11,7 @@ public class Chore : Interactable
     float? startedAt;
     Interacter player;
 
-    public override void OnInteract(GameObject player)
+    public override void OnInteract(GameObject player, InventoryItem target)
     {
         startedAt = Time.time;
         this.player = player.GetComponent<Interacter>();

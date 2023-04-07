@@ -7,7 +7,7 @@ public class LightSwitch : Interactable
     [SerializeField]
     Light lightSource;
 
-    public override void OnInteract(GameObject player)
+    public override void OnInteract(GameObject player, InventoryItem item)
     {
         lightSource.enabled = !lightSource.enabled;
     }
