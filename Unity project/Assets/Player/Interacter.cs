@@ -22,13 +22,14 @@ public class Interacter : MonoBehaviour
     {
         if (interactPressed)
         {
+            InventoryItem selectedItem = inventory.SelectedItem();
             if (focusItem)
             {
-                focusItem.OnInteract(gameObject, inventory.SelectedItem());
+                focusItem.OnInteract(gameObject, selectedItem);
             }
-            else
+            else if (selectedItem)
             {
-                inventory.SelectedItem().Use(gameObject);
+                selectedItem.Use(gameObject);
             }
             interactPressed = false;
         }
