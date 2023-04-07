@@ -10,19 +10,22 @@ public abstract class Interactable : MonoBehaviour
 
     // For outlines
     [SerializeField]
-    float activeoutlineThickness = 6;
+    float activeOutlineThickness = 6;
     [SerializeField]
-    float inActiveoutlineThickness = 4;
+    float inactiveOutlineThickness = 4;
+
+
+    // For decals
+    [SerializeField]
+    float activeMaterialThickness = 0.2f;
+    [SerializeField]
+    float inActiveMaterialThickness = 0.1f;
+
+    // For both
     [SerializeField]
     Color activeoutlineColor = Color.yellow;
     [SerializeField]
     Color inActiveoutlineColor = Color.white;
-
-    // For decals
-    [SerializeField]
-    Material inactiveMaterial;
-    [SerializeField]
-    Material activeMaterial;
 
     Outline outline;
     DecalProjector decalProjector;
@@ -56,13 +59,14 @@ public abstract class Interactable : MonoBehaviour
             if (outline)
             {
                 outline.OutlineColor = activeoutlineColor;
-                outline.OutlineWidth = activeoutlineThickness;
+                outline.OutlineWidth = activeOutlineThickness;
                 outline.OutlineMode = Outline.Mode.OutlineAll;
             }
 
             if (decalProjector)
             {
-                decalProjector.material = activeMaterial;
+                decalProjector.material.SetColor("_OutlineColor", activeoutlineColor);
+                decalProjector.material.SetFloat("_OutlineThickness", activeMaterialThickness);
             }
         }
         else
@@ -70,13 +74,14 @@ public abstract class Interactable : MonoBehaviour
             if (outline)
             {
                 outline.OutlineColor = inActiveoutlineColor;
-                outline.OutlineWidth = inActiveoutlineThickness;
+                outline.OutlineWidth = inactiveOutlineThickness;
                 outline.OutlineMode = Outline.Mode.OutlineVisible;
             }
 
             if (decalProjector)
             {
-                decalProjector.material = inactiveMaterial;
+                decalProjector.material.SetColor("_OutlineColor", inActiveoutlineColor);
+                decalProjector.material.SetFloat("_OutlineThickness", inActiveMaterialThickness);
             }
         }
     }
