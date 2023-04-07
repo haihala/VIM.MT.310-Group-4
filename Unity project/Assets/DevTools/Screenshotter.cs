@@ -36,6 +36,7 @@ public class Screenshotter : MonoBehaviour
 
             item.displayName = go.name;
             item.id = go.name.Replace(" ", "_");
+            item.prefab = PrefabUtility.GetCorrespondingObjectFromSource(go);
             string iconPath = $"{iconFolderPath}/{item.id}_Icon.png";
 
             go.SetActive(true);
