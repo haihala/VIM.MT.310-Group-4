@@ -122,7 +122,7 @@ public class Inventory : MonoBehaviour
         return null;
     }
 
-    InventoryItem RemoveSelectedItem()
+    public InventoryItem RemoveSelectedItem()
     {
         int index = (int)selectedIndex;
         InventoryItem item = contents[index];

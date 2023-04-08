@@ -22,16 +22,22 @@ public class Interacter : MonoBehaviour
     {
         if (interactPressed)
         {
-            InventoryItem selectedItem = inventory.SelectedItem();
-            if (focusItem)
-            {
-                focusItem.OnInteract(gameObject, selectedItem);
-            }
-            else if (selectedItem)
-            {
-                selectedItem.Use(gameObject);
-            }
             interactPressed = false;
+
+            // Not doing a task
+            if (activeChore == null)
+            {
+
+                InventoryItem selectedItem = inventory.SelectedItem();
+                if (focusItem)
+                {
+                    focusItem.OnInteract(gameObject, selectedItem);
+                }
+                else if (selectedItem)
+                {
+                    selectedItem.Use(gameObject);
+                }
+            }
         }
 
         Interactable newFocus = null;

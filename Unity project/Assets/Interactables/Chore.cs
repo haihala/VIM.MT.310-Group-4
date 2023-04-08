@@ -11,17 +11,19 @@ public class Chore : Interactable
     float timeToCompletion = 1;
     [SerializeField]
     GameObject modelWhenDone;
-    float? startedAt;
+    protected float? interactionStartedAt;
     Interacter player;
 
-    public override void OnInteract(GameObject player, InventoryItem tool)
+    public override bool OnInteract(GameObject player, InventoryItem tool)
     {
         if (toolRequirements.Count == 0 || toolRequirements.Contains(tool))
         {
-            startedAt = Time.time;
+            interactionStartedAt = Time.time;
             this.player = player.GetComponent<Interacter>();
             this.player.StartInteracting(this);
+            return true;
         }
+        return false;
     }
 
 
@@ -30,17 +32,11 @@ public class Chore : Interactable
         base.Start();
     }
 
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if (GetProgress() > 1)
         {
-            // Done
-            if (modelWhenDone)
-            {
-                GameObject obj = Instantiate(modelWhenDone);
-                obj.transform.position = transform.position;
-            }
-            Destroy(gameObject);
+            ChoreDone();
 
             player.EndInteracting();
         }
@@ -48,8 +44,20 @@ public class Chore : Interactable
 
     public float GetProgress()
     {
-        if (startedAt == null) return 0;
-        float timeUsed = Time.time - (float)startedAt;
+        if (interactionStartedAt == null) return 0;
+        float timeUsed = Time.time - (float)interactionStartedAt;
         return timeUsed / timeToCompletion;
+    }
+
+    virtual protected void ChoreDone()
+    {
+        // Done
+        if (modelWhenDone)
+        {
+            GameObject obj = Instantiate(modelWhenDone);
+            obj.transform.position = transform.position;
+        }
+
+        Destroy(gameObject);
     }
 }
