@@ -1098,8 +1098,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
