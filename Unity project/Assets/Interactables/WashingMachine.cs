@@ -27,6 +27,8 @@ public class WashingMachine : Chore
     Vector3 shakeOffsets;
     Vector3 shakeShift;
 
+    ParticleSystem doneParticles;
+
     public override bool OnInteract(GameObject player, InventoryItem tool)
     {
         Inventory inventory = player.GetComponent<Inventory>();
@@ -67,6 +69,7 @@ public class WashingMachine : Chore
             if (started + washingTime < Time.time)
             {
                 wms = WashingMachineState.Done;
+                EmitParticles();
             }
         }
     }
@@ -80,6 +83,20 @@ public class WashingMachine : Chore
             Mathf.Sin(Time.time * shakeFrequences.z + shakeOffsets.z) * shakeStrength
         ) : Vector3.zero;
         transform.position += shakeShift;
+    }
+
+    void EmitParticles()
+    {
+        if (doneParticles == null)
+        {
+            GameObject obj = Instantiate(particlesWhenDone);
+            obj.transform.position = transform.position;
+            doneParticles = obj.transform.GetChild(0).GetComponent<ParticleSystem>();
+        }
+        else
+        {
+            doneParticles.Play();
+        }
     }
 
     protected override void ChoreDone()

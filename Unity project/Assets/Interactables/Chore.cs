@@ -10,7 +10,9 @@ public class Chore : Interactable
     [SerializeField]
     float timeToCompletion = 1;
     [SerializeField]
-    GameObject modelWhenDone;
+    protected GameObject modelWhenDone;
+    [SerializeField]
+    protected GameObject particlesWhenDone;
     protected float? interactionStartedAt;
     Interacter player;
 
@@ -54,8 +56,13 @@ public class Chore : Interactable
         // Done
         if (modelWhenDone)
         {
-            GameObject obj = Instantiate(modelWhenDone);
-            obj.transform.position = transform.position;
+            GameObject model = Instantiate(modelWhenDone);
+            model.transform.position = transform.position;
+        }
+        if (particlesWhenDone)
+        {
+            GameObject particles = Instantiate(particlesWhenDone);
+            particles.transform.position = transform.position;
         }
 
         Destroy(gameObject);

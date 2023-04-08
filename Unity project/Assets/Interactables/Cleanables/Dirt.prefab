@@ -98,3 +98,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 25616863a6c81554fab4839fa134f4f6, type: 2}
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
+  particlesWhenDone: {fileID: 2835738190165470960, guid: e9f3d5786601586439971dd7926de6d4, type: 3}
