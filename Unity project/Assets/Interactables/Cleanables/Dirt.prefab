@@ -87,13 +87,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd36ed8ede5b424fbd3edd84f1144be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  extraInteractionRange: 1
-  activeoutlineThickness: 6
-  inActiveoutlineThickness: 4
+  extraInteractionRange: 0
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterial: {fileID: 2100000, guid: eba4a466dbda35146997d0851c1fd10b, type: 2}
+  inactiveMaterial: {fileID: 2100000, guid: 13da18d08b99beb4b82bdbec16e82a61, type: 2}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
-  inactiveMaterial: {fileID: 2100000, guid: 13da18d08b99beb4b82bdbec16e82a61, type: 2}
-  activeMaterial: {fileID: 2100000, guid: b6d9e1e01268f8943807e5c1a8317b14, type: 2}
   toolRequirements:
   - {fileID: 11400000, guid: 25616863a6c81554fab4839fa134f4f6, type: 2}
   timeToCompletion: 1

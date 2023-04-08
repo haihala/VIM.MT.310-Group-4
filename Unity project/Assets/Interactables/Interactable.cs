@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -17,9 +15,9 @@ public abstract class Interactable : MonoBehaviour
 
     // For decals
     [SerializeField]
-    float activeMaterialThickness = 0.2f;
+    Material activeMaterial;
     [SerializeField]
-    float inActiveMaterialThickness = 0.1f;
+    Material inactiveMaterial;
 
     // For both
     [SerializeField]
@@ -65,8 +63,7 @@ public abstract class Interactable : MonoBehaviour
 
             if (decalProjector)
             {
-                decalProjector.material.SetColor("_OutlineColor", activeoutlineColor);
-                decalProjector.material.SetFloat("_OutlineThickness", activeMaterialThickness);
+                decalProjector.material = activeMaterial;
             }
         }
         else
@@ -80,8 +77,7 @@ public abstract class Interactable : MonoBehaviour
 
             if (decalProjector)
             {
-                decalProjector.material.SetColor("_OutlineColor", inActiveoutlineColor);
-                decalProjector.material.SetFloat("_OutlineThickness", inActiveMaterialThickness);
+                decalProjector.material = inactiveMaterial;
             }
         }
     }

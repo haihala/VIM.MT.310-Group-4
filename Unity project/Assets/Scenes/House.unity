@@ -195,8 +195,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
@@ -1417,8 +1417,8 @@ MonoBehaviour:
   extraInteractionRange: 1
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   lightSource: {fileID: 700862520}
@@ -1980,8 +1980,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
@@ -2525,8 +2525,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
@@ -2645,6 +2645,63 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1001 &733813305
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.801
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.65981936
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.449
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7594007
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.41351548
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.24021573
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.4411485
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 24.589
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -53.365
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -72.807
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355781, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_Name
+      value: Dirt (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
 --- !u!1 &740788043 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6446426266121154072, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
@@ -2717,8 +2774,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
@@ -2833,8 +2890,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
@@ -3594,8 +3651,8 @@ MonoBehaviour:
   extraInteractionRange: 1
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   lightSource: {fileID: 1649228723}
@@ -3890,8 +3947,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
@@ -4149,6 +4206,63 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3518750665469261818, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
+--- !u!1001 &1127887115
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.1907473
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.65981936
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.2582501
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7594007
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.41351548
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.24021573
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.4411485
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 24.589
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -53.365
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -72.807
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370518423088355781, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: m_Name
+      value: Dirt (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
 --- !u!1 &1130061626 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6254142388983491701, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
@@ -4479,8 +4593,8 @@ MonoBehaviour:
   extraInteractionRange: 1
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   lightSource: {fileID: 1014136559}
@@ -4593,8 +4707,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
@@ -4870,8 +4984,8 @@ MonoBehaviour:
   extraInteractionRange: 1
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   lightSource: {fileID: 895109123}
@@ -5440,8 +5554,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
@@ -5480,8 +5594,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
@@ -5616,8 +5730,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
@@ -6192,8 +6306,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
@@ -6435,7 +6549,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1731528239 stripped
 GameObject:
@@ -6547,8 +6661,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
@@ -7597,8 +7711,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
@@ -7945,63 +8059,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8341543475257476422, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
---- !u!1001 &2100142364
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.109
-      objectReference: {fileID: 0}
-    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.107
-      objectReference: {fileID: 0}
-    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7935679
-      objectReference: {fileID: 0}
-    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.604451
-      objectReference: {fileID: 0}
-    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.023732783
-      objectReference: {fileID: 0}
-    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.06577071
-      objectReference: {fileID: 0}
-    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 72.984
-      objectReference: {fileID: 0}
-    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -23.604
-      objectReference: {fileID: 0}
-    - target: {fileID: 8370518423088355780, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -27.049
-      objectReference: {fileID: 0}
-    - target: {fileID: 8370518423088355781, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
-      propertyPath: m_Name
-      value: Dirt
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
 --- !u!1 &2101869634 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4726801627906763058, guid: 7f00d64750a5bb44f86a388e6e7a8ed5, type: 3}
@@ -8131,8 +8188,8 @@ MonoBehaviour:
   extraInteractionRange: 0
   activeOutlineThickness: 6
   inactiveOutlineThickness: 4
-  activeMaterialThickness: 0.2
-  inActiveMaterialThickness: 0.1
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
   activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
   toolRequirements: []
@@ -8184,7 +8241,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 647978254967008369, guid: e7cafd6507e81254e9d6671568c9ad03, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 647978254967008369, guid: e7cafd6507e81254e9d6671568c9ad03, type: 3}
       propertyPath: m_LocalPosition.x
