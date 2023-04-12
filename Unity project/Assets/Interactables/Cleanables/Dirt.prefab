@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8370518423088355783}
   - component: {fileID: 8370518423088355801}
   - component: {fileID: 8370518423088355782}
+  - component: {fileID: 7973677804158812799}
   m_Layer: 0
   m_Name: Dirt
   m_TagString: Untagged
@@ -99,3 +100,16 @@ MonoBehaviour:
   timeToCompletion: 1
   modelWhenDone: {fileID: 0}
   particlesWhenDone: {fileID: 2835738190165470960, guid: e9f3d5786601586439971dd7926de6d4, type: 3}
+--- !u!114 &7973677804158812799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370518423088355781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee32925e95a40b8408823770a7c63dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 50
