@@ -28,6 +28,7 @@ public class WashingMachine : Chore
     Vector3 shakeShift;
 
     ParticleSystem doneParticles;
+    Task beingWashed;
 
     public override bool OnInteract(GameObject player, InventoryItem tool)
     {
@@ -40,6 +41,7 @@ public class WashingMachine : Chore
                 {
                     // Consume the laundry hamper
                     inventory.RemoveSelectedItem();
+                    beingWashed = tool.prefab.GetComponent<Task>();
                     return true;
                 }
                 return false;
@@ -50,6 +52,11 @@ public class WashingMachine : Chore
                 {
                     inventory.AddItem(cleanHamper);
                     wms = WashingMachineState.Empty;
+                    if (beingWashed)
+                    {
+                        TaskManager.Instance.MarkComplete(beingWashed);
+                        beingWashed = null;
+                    }
                     return true;
                 }
             // This shoulnd't ever happen

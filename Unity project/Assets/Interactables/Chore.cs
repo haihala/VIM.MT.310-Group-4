@@ -16,6 +16,7 @@ public class Chore : Interactable
     protected float? interactionStartedAt;
     Interacter player;
 
+
     public override bool OnInteract(GameObject player, InventoryItem tool)
     {
         if (toolRequirements.Count == 0 || toolRequirements.Contains(tool))
@@ -65,6 +66,11 @@ public class Chore : Interactable
             particles.transform.position = transform.position;
         }
 
+        Task task = GetComponent<Task>();
+        if (task != null)
+        {
+            TaskManager.Instance.MarkComplete(task);
+        }
         Destroy(gameObject);
     }
 }
