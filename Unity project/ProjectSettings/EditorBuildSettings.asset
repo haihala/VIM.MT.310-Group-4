@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Base.unity
     guid: 10078589f5158fb4ca5ba86294fa92bf
+  - enabled: 1
+    path: Assets/Scenes/Defeat.unity
+    guid: f93bf36f0c6884f4a81d532b5d505c56
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e8ff226bcce9f4747aaa5b049614da7c, type: 2}
