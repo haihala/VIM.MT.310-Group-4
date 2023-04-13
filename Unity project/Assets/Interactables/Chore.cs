@@ -15,6 +15,7 @@ public class Chore : Interactable
     protected GameObject particlesWhenDone;
     protected float? interactionStartedAt;
     Interacter player;
+    AudioSource sfx;
 
 
     public override bool OnInteract(GameObject player, InventoryItem tool)
@@ -24,6 +25,10 @@ public class Chore : Interactable
             interactionStartedAt = Time.time;
             this.player = player.GetComponent<Interacter>();
             this.player.StartInteracting(this);
+            if (sfx != null)
+            {
+                sfx.Play();
+            }
             return true;
         }
         return false;
@@ -32,6 +37,7 @@ public class Chore : Interactable
 
     protected override void Start()
     {
+        sfx = GetComponent<AudioSource>();
         base.Start();
     }
 
@@ -64,6 +70,10 @@ public class Chore : Interactable
         {
             GameObject particles = Instantiate(particlesWhenDone);
             particles.transform.position = transform.position;
+        }
+        if (sfx != null)
+        {
+            sfx.Stop();
         }
 
         Task task = GetComponent<Task>();

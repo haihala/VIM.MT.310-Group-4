@@ -2432,5 +2432,9 @@ PrefabInstance:
       propertyPath: modelWhenDone
       value: 
       objectReference: {fileID: 2835738190165470960, guid: e9f3d5786601586439971dd7926de6d4, type: 3}
+    - target: {fileID: 8370518423088355782, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
+      propertyPath: timeToCompletion
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: debcc62eb9beb3245b33a80c5b2b50f6, type: 3}
