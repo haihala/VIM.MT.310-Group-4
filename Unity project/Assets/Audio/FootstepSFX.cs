@@ -38,7 +38,6 @@ public class FootstepSFX : MonoBehaviour
         }
         else
         {
-            print("not moving");
             buildup = 0;
         }
     }
