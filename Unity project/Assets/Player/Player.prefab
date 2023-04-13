@@ -484,6 +484,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crouching: 0
   crouchingHeight: 0.85
+  crouchingVolume: 0.5
+  crouchingStepInterval: 0.9
 --- !u!82 &2422843945234490370
 AudioSource:
   m_ObjectHideFlags: 0

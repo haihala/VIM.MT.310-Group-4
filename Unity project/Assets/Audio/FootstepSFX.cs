@@ -7,8 +7,7 @@ public class FootstepSFX : MonoBehaviour
 {
     [SerializeField]
     List<AudioClip> clips;
-    [SerializeField]
-    float interval;
+    public float interval;
 
     AudioSource player;
     Vector3 positionLastFrame;
