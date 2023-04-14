@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.SceneManagement;
 
 public class Investigator : MonoBehaviour
 {
@@ -36,6 +33,11 @@ public class Investigator : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene("Defeat");
+        bool collidingWithPlayer = other.gameObject.layer == 3;
+        if (collidingWithPlayer)
+        {
+            other.gameObject.GetComponent<CharacterController>().enabled = false;
+            other.gameObject.GetComponent<PlayerAnimationUpdater>().Die();
+        }
     }
 }

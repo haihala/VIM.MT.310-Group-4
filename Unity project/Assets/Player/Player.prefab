@@ -419,6 +419,7 @@ MonoBehaviour:
   runAnimations: {fileID: 9100000, guid: eb79e3fd0dd669f40a90a984b92a0ccf, type: 2}
   jumpAnimations: {fileID: 9100000, guid: 54ff599963ec97843ad4d4ddeeb61810, type: 2}
   fallAnimations: {fileID: 9100000, guid: 441942176ee9a724b9afe936d1d03496, type: 2}
+  deathAnimations: {fileID: 9100000, guid: 19da49b09c1a3ed47b8ff27b6ec8f248, type: 2}
   modelRotationSpeed: 10
 --- !u!114 &436759148290552142
 MonoBehaviour:

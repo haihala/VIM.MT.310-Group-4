@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAnimationUpdater : MonoBehaviour
 {
@@ -12,6 +11,7 @@ public class PlayerAnimationUpdater : MonoBehaviour
     public RuntimeAnimatorController runAnimations;
     public RuntimeAnimatorController jumpAnimations;
     public RuntimeAnimatorController fallAnimations;
+    public RuntimeAnimatorController deathAnimations;
 
     public float modelRotationSpeed;
 
@@ -26,6 +26,15 @@ public class PlayerAnimationUpdater : MonoBehaviour
 
     void Update()
     {
+        if (modelAnimator.runtimeAnimatorController == deathAnimations)
+        {
+            if (modelAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+            {
+                SceneManager.LoadScene("Defeat");
+            }
+            return;
+        }
+
         bool crouching = croucher.crouching;
         bool moving = playerMover.horizontalVelocity != Vector3.zero;
         if (moving)
@@ -75,5 +84,11 @@ public class PlayerAnimationUpdater : MonoBehaviour
             modelAnimator.runtimeAnimatorController = idleAnimations;
         }
 
+    }
+
+    public void Die()
+    {
+        modelAnimator.runtimeAnimatorController = deathAnimations;
+        modelAnimator.applyRootMotion = true;
     }
 }
