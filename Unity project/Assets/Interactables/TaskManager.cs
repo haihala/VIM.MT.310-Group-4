@@ -17,23 +17,23 @@ public class TaskManager : MonoBehaviour
         {
             _instance = this;
             slider.value = 0;
+            registered = new List<Task>();
+            complete = new List<Task>();
+            foreach (Task task in Object.FindObjectsByType<Task>(FindObjectsSortMode.None))
+            {
+                registered.Add(task);
+            }
         }
     }
 
     [SerializeField]
+    float portalThreshold = 0.75f;
+    [SerializeField]
     Slider slider;
 
-    // These are for debugging and not meant to be assigned to
-    [SerializeField]
     List<Task> registered;
-
-    [SerializeField]
     List<Task> complete;
 
-    public void Register(Task task)
-    {
-        registered.Add(task);
-    }
 
     public void MarkComplete(Task task)
     {
@@ -41,6 +41,15 @@ public class TaskManager : MonoBehaviour
         // The things in registered list aren't stricly the same, so just play it a bit fuzzy.
         complete.Add(task);
         slider.value = CompletionPercentage;
+
+        if (CompletionPercentage >= portalThreshold)
+        {
+            Portal[] portals = Object.FindObjectsByType<Portal>(FindObjectsSortMode.None);
+            foreach (Portal portal in portals)
+            {
+                portal.Activate();
+            }
+        }
     }
 
     int RegisteredPoints
