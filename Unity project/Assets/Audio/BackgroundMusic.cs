@@ -16,8 +16,10 @@ public class BackgroundMusic : MonoBehaviour
         {
             _instance = this;
             player = GetComponent<AudioSource>();
+            baseVolume = player.volume;
         }
     }
+    float baseVolume;
 
     [SerializeField]
     float fadeTime;
@@ -34,7 +36,7 @@ public class BackgroundMusic : MonoBehaviour
         if (timeSinceLastSwitch <= fadeTime)
         {
             // Ramp down
-            player.volume = 1 - timeSinceLastSwitch / fadeTime;
+            player.volume = baseVolume * (1 - timeSinceLastSwitch / fadeTime);
         }
         else if (timeSinceLastSwitch <= 2 * fadeTime)
         {
@@ -50,17 +52,20 @@ public class BackgroundMusic : MonoBehaviour
         else if (timeSinceLastSwitch <= 3 * fadeTime)
         {
             // Ramp up
-            player.volume = timeSinceLastSwitch / fadeTime - 2;
+            player.volume = baseVolume * (timeSinceLastSwitch / fadeTime - 2);
         }
         else
         {
-            player.volume = 1;
+            player.volume = baseVolume;
         }
     }
 
     public void Change(AudioClip clip)
     {
-        next = clip;
-        lastSwitch = Time.time;
+        if (clip != player.clip)
+        {
+            next = clip;
+            lastSwitch = Time.time;
+        }
     }
 }
