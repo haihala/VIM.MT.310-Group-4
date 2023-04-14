@@ -11,7 +11,15 @@ public class ChoreProgressBar : MonoBehaviour
 
     public void SetProgress(float progress)
     {
-        pane.sizeDelta = new Vector2(progress * maxWidth, pane.sizeDelta.y);
+        if (progress == 0)
+        {
+            pane.gameObject.SetActive(false);
+        }
+        else
+        {
+            pane.gameObject.SetActive(true);
+            pane.sizeDelta = new Vector2(progress * maxWidth, pane.sizeDelta.y);
+        }
     }
 
     void Start()
