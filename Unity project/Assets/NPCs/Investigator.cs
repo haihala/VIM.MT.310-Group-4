@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Investigator : MonoBehaviour
 {
     NavMeshAgent agent;
     TotalSenses senses;
+
+    float distanceLastFrame;
 
     void Awake()
     {
@@ -16,15 +19,23 @@ public class Investigator : MonoBehaviour
 
     void Update()
     {
-        if ((agent.destination - transform.position).magnitude < 1)
+        float distance = (agent.destination - transform.position).magnitude;
+        if (distance >= distanceLastFrame)
         {
-            // At the investigation point
+            // Not getting closer, discard point
             senses.Discard(agent.destination);
         }
+        distanceLastFrame = distance;
     }
 
     public void Investigate(Vector3 point)
     {
         agent.destination = point;
+        distanceLastFrame = Mathf.Infinity;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        SceneManager.LoadScene("Defeat");
     }
 }
