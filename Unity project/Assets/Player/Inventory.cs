@@ -157,6 +157,17 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void ThrowSelectedItem(float horizontalVelocity, float verticalVelocity)
+    {
+        GameObject obj = Instantiate(SelectedItem().prefab);
+        obj.transform.position = transform.position + dropDistance * model.forward;
+
+        Rigidbody rb = obj.GetComponent<Rigidbody>();
+        rb.velocity = horizontalVelocity * model.forward + verticalVelocity * model.up;
+
+        RemoveSelectedItem();
+    }
+
     public void OnNextItem(InputAction.CallbackContext value)
     {
         scrollDirection = 1;
