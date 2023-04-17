@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 2811345548951768859}
   - component: {fileID: 2114612463229105737}
   m_Layer: 0
-  m_Name: BasicGuard
+  m_Name: Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
