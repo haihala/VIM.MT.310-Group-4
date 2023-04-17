@@ -5,26 +5,24 @@ using UnityEngine.UI;
 
 public class ChoreProgressBar : MonoBehaviour
 {
-    [SerializeField]
-    RectTransform pane;
-    float maxWidth;
+    Slider slider;
 
     public void SetProgress(float progress)
     {
         if (progress == 0)
         {
-            pane.gameObject.SetActive(false);
+            slider.gameObject.SetActive(false);
         }
         else
         {
-            pane.gameObject.SetActive(true);
-            pane.sizeDelta = new Vector2(progress * maxWidth, pane.sizeDelta.y);
+            slider.gameObject.SetActive(true);
+            slider.value = progress;
         }
     }
 
     void Start()
     {
-        maxWidth = GetComponent<RectTransform>().sizeDelta.x;
+        slider = GetComponent<Slider>();
         SetProgress(0);
     }
 }
