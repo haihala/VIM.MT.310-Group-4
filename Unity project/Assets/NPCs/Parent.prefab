@@ -698,9 +698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbcd537c3d14ea74c9b28dab1bb6bfcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targets:
-  - {fileID: 0}
-  - {fileID: 0}
+  targets: []
 --- !u!114 &4297588629204880725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,6 +805,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8bef7e00e767f249a24663e7f738d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeMultiplier: 1
+  crouchDampening: 0.5
+  emitSoundCue: 0
   clips:
   - {fileID: 8300000, guid: ec4bd5988d7de0c41ab2d9959705dd8b, type: 3}
   - {fileID: 8300000, guid: a45bdfd5056ed1d4d8f667cc2498ca12, type: 3}
@@ -818,7 +819,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 76c66b3ae15685a45a334b0628d1edd1, type: 3}
   - {fileID: 8300000, guid: c41fb169b2991c247a5466e00faa6639, type: 3}
   - {fileID: 8300000, guid: 8e001351cd7065543a068386cde4c960, type: 3}
-  interval: 0.45
+  strideLength: 1
 --- !u!82 &2811345548951768859
 AudioSource:
   m_ObjectHideFlags: 0

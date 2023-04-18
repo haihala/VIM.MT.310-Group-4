@@ -2855,7 +2855,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2228677605660211767, guid: 5630e906d6885bf47a4cc3f56f137b83, type: 3}
       propertyPath: m_Name
-      value: BasicGuard
+      value: Parent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297588629204880724, guid: 5630e906d6885bf47a4cc3f56f137b83, type: 3}
+      propertyPath: targets.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4297588629204880724, guid: 5630e906d6885bf47a4cc3f56f137b83, type: 3}
       propertyPath: targets.Array.data[0]

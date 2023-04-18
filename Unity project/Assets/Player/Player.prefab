@@ -157,7 +157,6 @@ GameObject:
   - component: {fileID: 436759148290552130}
   - component: {fileID: 436759148290552142}
   - component: {fileID: 436759148290552128}
-  - component: {fileID: 436759148290552129}
   - component: {fileID: 7393910668611810668}
   - component: {fileID: 2422843945234490370}
   - component: {fileID: 8404363383106882994}
@@ -457,21 +456,6 @@ MonoBehaviour:
   slotPrefab: {fileID: 4041926307002279939, guid: b3ced54d846e4434a9eadf50d9760299, type: 3}
   inventoryBar: {fileID: 0}
   interactionCooldown: 0.1
---- !u!114 &436759148290552129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 436759148290552189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f7602b7374ae74bbcf073b741c5070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runningDistance: 10
-  sneakingDistance: 1
-  velocityThreshold: 0.5
 --- !u!114 &7393910668611810668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,8 +470,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crouching: 0
   crouchingHeight: 0.85
-  crouchingVolume: 0.5
-  crouchingStepInterval: 0.9
 --- !u!82 &2422843945234490370
 AudioSource:
   m_ObjectHideFlags: 0
@@ -596,6 +578,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8bef7e00e767f249a24663e7f738d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeMultiplier: 1
+  crouchDampening: 0.5
+  emitSoundCue: 1
   clips:
   - {fileID: 8300000, guid: b993df4a93c1d304ab19d8b2eb88c9a5, type: 3}
   - {fileID: 8300000, guid: 5c9bdbce37b06a24fa6ea793bcfd1907, type: 3}
@@ -605,7 +590,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 14ae706fef2303e4cb71112dbd5d250b, type: 3}
   - {fileID: 8300000, guid: b995bc1775ea83b4b8f861763e9a1424, type: 3}
   - {fileID: 8300000, guid: d15f7338d693f0343843a6b9096d27f6, type: 3}
-  interval: 0.3
+  strideLength: 0.9
 --- !u!1 &436759149371744094
 GameObject:
   m_ObjectHideFlags: 0
