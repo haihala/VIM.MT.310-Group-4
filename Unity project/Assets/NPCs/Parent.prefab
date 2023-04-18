@@ -805,9 +805,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8bef7e00e767f249a24663e7f738d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeMultiplier: 1
+  audibleVolumeMultiplier: 1
+  soundCueVolumeMultiplier: 0
   crouchDampening: 0.5
-  emitSoundCue: 0
   clips:
   - {fileID: 8300000, guid: ec4bd5988d7de0c41ab2d9959705dd8b, type: 3}
   - {fileID: 8300000, guid: a45bdfd5056ed1d4d8f667cc2498ca12, type: 3}

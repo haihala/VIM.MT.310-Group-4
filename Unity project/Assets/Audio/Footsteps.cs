@@ -7,11 +7,11 @@ using UnityEngine.AI;
 public class Footsteps : MonoBehaviour
 {
     [SerializeField]
-    float volumeMultiplier;
+    float audibleVolumeMultiplier;
+    [SerializeField]
+    float soundCueVolumeMultiplier;
     [SerializeField]
     float crouchDampening = 0.5f;
-    [SerializeField]
-    bool emitSoundCue;
     [SerializeField]
     List<AudioClip> clips;
 
@@ -73,13 +73,10 @@ public class Footsteps : MonoBehaviour
 
     void MakeStep(float velocity)
     {
-        float volume = velocity * ((croucher != null && croucher.crouching) ? crouchDampening : 1) * volumeMultiplier;
-        if (emitSoundCue)
-        {
-            SoundCueSystem.Instance.Invoke(transform.position, volume);
-        }
+        float volume = velocity * ((croucher != null && croucher.crouching) ? crouchDampening : 1);
+        SoundCueSystem.Instance.Invoke(transform.position, volume * soundCueVolumeMultiplier);
         int index = Random.Range(0, clips.Count);
-        player.PlayOneShot(clips[index], volume);
+        player.PlayOneShot(clips[index], volume * audibleVolumeMultiplier);
         buildup = strideLength;
     }
 }
