@@ -8515,6 +8515,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2114612463229105737, guid: 5630e906d6885bf47a4cc3f56f137b83, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2228677605659846615, guid: 5630e906d6885bf47a4cc3f56f137b83, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8563,6 +8567,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parent
       objectReference: {fileID: 0}
+    - target: {fileID: 4297588629204880723, guid: 5630e906d6885bf47a4cc3f56f137b83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4297588629204880724, guid: 5630e906d6885bf47a4cc3f56f137b83, type: 3}
       propertyPath: targets.Array.size
       value: 1
@@ -8571,7 +8579,8 @@ PrefabInstance:
       propertyPath: targets.Array.data[0]
       value: 
       objectReference: {fileID: 752959562}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4297588629204880723, guid: 5630e906d6885bf47a4cc3f56f137b83, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5630e906d6885bf47a4cc3f56f137b83, type: 3}
 --- !u!1 &2005799762
 GameObject:
