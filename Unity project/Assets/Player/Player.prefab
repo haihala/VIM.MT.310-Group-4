@@ -448,6 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equipment: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: a0dd52e4243f14b018e4f27e4dae8213, type: 3}
   displayItems:
   - {fileID: 789096576906175221}
   model: {fileID: 109519452056230297}

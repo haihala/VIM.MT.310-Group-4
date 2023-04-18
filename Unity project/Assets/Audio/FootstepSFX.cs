@@ -31,8 +31,7 @@ public class FootstepSFX : MonoBehaviour
             {
                 // Play
                 int index = Random.Range(0, clips.Count);
-                player.clip = clips[index];
-                player.Play();
+                player.PlayOneShot(clips[index]);
                 buildup = 0;
             }
         }

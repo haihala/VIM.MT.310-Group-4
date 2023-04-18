@@ -7,6 +7,8 @@ public class Inventory : MonoBehaviour
 {
     public Equipment equipment;
     [SerializeField]
+    AudioClip pickupSound;
+    [SerializeField]
     List<WorldItem> displayItems;
 
     [SerializeField]
@@ -38,6 +40,7 @@ public class Inventory : MonoBehaviour
     public void AddItem(InventoryItem item)
     {
         contents.Add(item);
+        GetComponent<AudioSource>().PlayOneShot(pickupSound);
 
         GameObject obj = Instantiate(slotPrefab);
         obj.transform.SetParent(inventoryBar, false);
