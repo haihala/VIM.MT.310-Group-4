@@ -5,17 +5,17 @@ public class Door : Interactable
 {
     public bool IsOpen = false;
     [SerializeField]
-    private float Speed = 1f;
+    float Speed = 1f;
     [SerializeField]
-    private float RotationAmount = 90f;
+    float RotationAmount = 90f;
 
-    private Vector3 StartRotation;
-    private Vector3 StartPosition;
-    private Vector3 Forward;
+    Vector3 StartRotation;
+    Vector3 StartPosition;
+    Vector3 Forward;
 
-    private Coroutine AnimationCoroutine;
+    Coroutine AnimationCoroutine;
 
-    private void Awake()
+    void Awake()
     {
         StartRotation = transform.rotation.eulerAngles;
         // Since "Forward" actually is pointing into the door frame, choose a direction to think about as "forward"
@@ -40,6 +40,7 @@ public class Door : Interactable
     {
         if (!IsOpen)
         {
+
             if (AnimationCoroutine != null)
             {
                 StopCoroutine(AnimationCoroutine);
@@ -50,7 +51,7 @@ public class Door : Interactable
         }
     }
 
-    private IEnumerator DoRotationOpen(float ForwardAmount)
+    IEnumerator DoRotationOpen(float ForwardAmount)
     {
         Quaternion startRotation = transform.rotation;
         Quaternion endRotation = Quaternion.Euler(
@@ -67,42 +68,34 @@ public class Door : Interactable
 
         IsOpen = true;
 
-        float time = 0;
-        while (time < 1)
+        for (float time = 0; time < 1; time += Time.deltaTime * Speed)
         {
             transform.rotation = Quaternion.Slerp(startRotation, endRotation, time);
             yield return null;
-            time += Time.deltaTime * Speed;
         }
     }
 
-    public void Close()
+    void Close()
     {
-        if (IsOpen)
+        if (AnimationCoroutine != null)
         {
-            if (AnimationCoroutine != null)
-            {
-                StopCoroutine(AnimationCoroutine);
-            }
-
-            AnimationCoroutine = StartCoroutine(DoRotationClose());
-
+            StopCoroutine(AnimationCoroutine);
         }
+
+        AnimationCoroutine = StartCoroutine(DoRotationClose());
     }
 
-    private IEnumerator DoRotationClose()
+    IEnumerator DoRotationClose()
     {
         Quaternion startRotation = transform.rotation;
         Quaternion endRotation = Quaternion.Euler(StartRotation);
 
         IsOpen = false;
 
-        float time = 0;
-        while (time < 1)
+        for (float time = 0; time < 1; time += Time.deltaTime * Speed)
         {
             transform.rotation = Quaternion.Slerp(startRotation, endRotation, time);
             yield return null;
-            time += Time.deltaTime * Speed;
         }
     }
 }
