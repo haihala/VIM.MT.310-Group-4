@@ -5,8 +5,16 @@ using UnityEngine;
 public class DistractionSound : MonoBehaviour
 {
     public float volume;
+    AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         SoundCueSystem.Instance.Invoke(transform.position, GetComponent<Rigidbody>().velocity.magnitude * volume);
+        audioSource.Play();
     }
 }
