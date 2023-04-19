@@ -19,6 +19,6 @@ public class NavMeshAgentAnimationUpdater : MonoBehaviour
     void Update()
     {
         // We multiply by two to make the parent not run
-        animator.SetFloat("Speed", agent.velocity.magnitude / (scaler * agent.speed));
+        animator.SetFloat("Speed", Mathf.Clamp01(agent.velocity.magnitude / scaler));
     }
 }

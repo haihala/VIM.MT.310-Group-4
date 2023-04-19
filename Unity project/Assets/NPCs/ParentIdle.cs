@@ -42,22 +42,20 @@ public class ParentIdle : MonoBehaviour
         while (true)
         {
             GoToTV();
-            yield return new WaitForSeconds(30);
+            yield return new WaitForSeconds(35);
             GoToFridge();
-            yield return new WaitForSeconds(30);
+            yield return new WaitForSeconds(25);
         }
     }
 
     void GoToFridge()
     {
-        print("Going to fridge");
         agent.SetDestination(fridgeTarget.position);
         lookAtTarget = fridge;
     }
 
     void GoToTV()
     {
-        print("Going to TV");
         agent.SetDestination(couchTarget.position);
         lookAtTarget = TV;
     }
@@ -66,11 +64,11 @@ public class ParentIdle : MonoBehaviour
     {
         if (lookAtTarget == TV)
         {
-            GoToFridge();
+            GoToTV();
         }
         else if (lookAtTarget == fridge)
         {
-            GoToTV();
+            GoToFridge();
         }
     }
 }
