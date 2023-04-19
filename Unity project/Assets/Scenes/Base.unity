@@ -293,6 +293,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 436759148290552128, guid: cc023d49c5fd8854590a9a8ffb40946a, type: 3}
+      propertyPath: inventoryBar
+      value: 
+      objectReference: {fileID: 62276003}
+    - target: {fileID: 436759148290552142, guid: cc023d49c5fd8854590a9a8ffb40946a, type: 3}
+      propertyPath: progressBar
+      value: 
+      objectReference: {fileID: 783368926}
     - target: {fileID: 436759148290552185, guid: cc023d49c5fd8854590a9a8ffb40946a, type: 3}
       propertyPath: m_RootOrder
       value: 2
