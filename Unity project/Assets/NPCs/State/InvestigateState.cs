@@ -9,7 +9,7 @@ public class InvestigateState : State
         TotalSenses detection = gameObject.GetComponent<TotalSenses>();
         if (!detection.IsSuspicious())
         {
-            return new PatrolState();
+            return new DefaultState();
         }
 
         List<Suspicion> suspicions = detection.Suspicions();

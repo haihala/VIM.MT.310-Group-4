@@ -8,7 +8,7 @@ public class StateMachine : MonoBehaviour
 
     void Start()
     {
-        current = new PatrolState();
+        current = new DefaultState();
         current.OnEnter(gameObject);
     }
 

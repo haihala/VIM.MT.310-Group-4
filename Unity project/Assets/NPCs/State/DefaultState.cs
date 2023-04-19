@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatrolState : State
+public class DefaultState : State
 {
     public override State OnUpdate(GameObject gameObject)
     {
@@ -19,14 +19,12 @@ public class PatrolState : State
     public override void OnEnter(GameObject gameObject)
     {
         base.OnEnter(gameObject);
-        Patroller patroller = gameObject.GetComponent<Patroller>();
-        patroller.enabled = true;
-        patroller.Continue();
+        gameObject.GetComponent<ParentIdle>().enabled = true;
     }
 
     public override void OnExit(GameObject gameObject)
     {
         base.OnExit(gameObject);
-        gameObject.GetComponent<Patroller>().enabled = false;
+        gameObject.GetComponent<ParentIdle>().enabled = false;
     }
 }
