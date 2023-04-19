@@ -605,6 +605,7 @@ GameObject:
   - component: {fileID: 2114612463229105737}
   - component: {fileID: 1365755260698268722}
   - component: {fileID: 1887415145056507255}
+  - component: {fileID: 6284086928562499814}
   m_Layer: 0
   m_Name: Parent
   m_TagString: Untagged
@@ -639,7 +640,7 @@ Animator:
   m_GameObject: {fileID: 2228677605660211767}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5917c0e93d180a842b61d1ebc62a195c, type: 3}
-  m_Controller: {fileID: 9100000, guid: 75d3a58b3d7879f41926561701407a48, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7d6b01dd8afc7f047b92f8d2e0eb7102, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -958,6 +959,18 @@ MonoBehaviour:
   fridgeTarget: {fileID: 0}
   TV: {fileID: 0}
   fridge: {fileID: 0}
+--- !u!114 &6284086928562499814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2228677605660211767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca86285070909b74781191251694f4ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2228677605660211769
 GameObject:
   m_ObjectHideFlags: 0

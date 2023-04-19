@@ -8617,6 +8617,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1434018957755206383}
     - target: {fileID: 1887415145056507255, guid: 5630e906d6885bf47a4cc3f56f137b83, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887415145056507255, guid: 5630e906d6885bf47a4cc3f56f137b83, type: 3}
       propertyPath: couchTarget
       value: 
       objectReference: {fileID: 1799881719}
