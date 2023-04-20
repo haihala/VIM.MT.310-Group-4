@@ -7,8 +7,8 @@ public class PlayerAnimationUpdater : MonoBehaviour
     public Transform modelTransform;
     public Animator modelAnimator;
     public RuntimeAnimatorController crouchAnimations;
-    public RuntimeAnimatorController idleAnimations;
-    public RuntimeAnimatorController runAnimations;
+    public RuntimeAnimatorController movementAnimations;
+    public float movementAnimationScaler;
     public RuntimeAnimatorController jumpAnimations;
     public RuntimeAnimatorController fallAnimations;
     public RuntimeAnimatorController deathAnimations;
@@ -60,29 +60,28 @@ public class PlayerAnimationUpdater : MonoBehaviour
                 modelAnimator.runtimeAnimatorController = fallAnimations;
             }
         }
-        else if (moving && crouching)
+        else if (crouching)
         {
-            // Sneaking
-            modelAnimator.runtimeAnimatorController = crouchAnimations;
+            if (moving)
+            {
+                // Sneaking
+                modelAnimator.runtimeAnimatorController = crouchAnimations;
+            }
+            else
+            {
+                // Crouch idle
+                modelAnimator.runtimeAnimatorController = crouchAnimations;
+                modelAnimator.speed = 0;
+                // Instead of a crouch idle state, just stop the sneak animation
+                // Not the best approach,  but it's pretty good
+            }
         }
-        else if (moving && !crouching)
+        else
         {
-            // Running
-            modelAnimator.runtimeAnimatorController = runAnimations;
+            modelAnimator.runtimeAnimatorController = movementAnimations;
+            modelAnimator.SetFloat("Speed", playerMover.horizontalVelocity.magnitude * movementAnimationScaler);
         }
-        else if (!moving && crouching)
-        {
-            // Crouch idle
-            modelAnimator.runtimeAnimatorController = crouchAnimations;
-            modelAnimator.speed = 0;
-            // Instead of a crouch idle state, just stop the sneak animation
-            // Not the best approach,  but it's pretty good
-        }
-        else if (!moving && !crouching)
-        {
-            // Standing
-            modelAnimator.runtimeAnimatorController = idleAnimations;
-        }
+
 
     }
 
