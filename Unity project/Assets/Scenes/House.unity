@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -447,6 +447,9 @@ GameObject:
   - component: {fileID: 158060536}
   - component: {fileID: 158060538}
   - component: {fileID: 158060537}
+  - component: {fileID: 158060541}
+  - component: {fileID: 158060540}
+  - component: {fileID: 158060539}
   m_Layer: 0
   m_Name: medium_plate (5)
   m_TagString: Untagged
@@ -519,6 +522,60 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158060535}
   m_Mesh: {fileID: 3527977384823007154, guid: 052d24f143ba8b244aa16b4e8cca94a8, type: 3}
+--- !u!114 &158060539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158060535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fd36ed8ede5b424fbd3edd84f1144be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  extraInteractionRange: 0
+  activeOutlineThickness: 6
+  inactiveOutlineThickness: 4
+  activeMaterial: {fileID: 0}
+  inactiveMaterial: {fileID: 0}
+  activeoutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  inActiveoutlineColor: {r: 1, g: 1, b: 1, a: 1}
+  toolRequirements: []
+  timeToCompletion: 1
+  modelWhenDone: {fileID: 0}
+  particlesWhenDone: {fileID: 2835738190165470960, guid: e9f3d5786601586439971dd7926de6d4, type: 3}
+--- !u!114 &158060540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158060535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &158060541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158060535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee32925e95a40b8408823770a7c63dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 25
 --- !u!1 &160568180
 GameObject:
   m_ObjectHideFlags: 0
